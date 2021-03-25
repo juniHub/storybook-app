@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+p {
+  margin: 10px 0 !important;
+}
+
+li a,
+label,
+h4,
+h5,
+h6 {
+  font-size: 1.5rem !important;
+  color: darkcyan;
+}
+
+strong {
+  color: purple;
+  border-bottom: solid 2px orange;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 3rem !important;
+  color: #392f5a;
+}
+
+.card {
+  background-color: orange;
+}
+
+body {
+  background-color: #fff8f0;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 1rem !important;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.fa-small {
+  font-size: 16px !important;
+}
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.red {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.img-small {
+  width: 180px;
+}
+
+.materialert {
+  position: relative;
+  min-width: 150px;
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.1s linear;
+  display: flex;
+  align-items: center;
+}
+.materialert .material-icons {
+  margin-right: 10px;
+}
+.materialert .close-alert {
+  -webkit-appearance: none;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  background: 0 0;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  filter: alpha(opacity=40);
+  margin-bottom: -5px;
+  position: absolute;
+  top: 16px;
+  right: 5px;
+}
+.materialert.info {
+  background-color: #039be5;
+  color: #fff;
+}
+.materialert.success {
+  background-color: #43a047;
+  color: #fff;
+}
+.materialert.error {
+  background-color: #c62828;
+  color: #fff;
+}
+.materialert.danger {
+  background-color: #c62828;
+  color: #fff;
+}
+.materialert.warning {
+  background-color: #fbc02d;
+  color: #fff;
+}
+
+.highlighted {
+  font-size: 20px;
+  color: purple !important;
+}
+
+.highlighted:hover{
+  background-color: orange;
+}

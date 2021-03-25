@@ -1,0 +1,71 @@
+<i class="material-icons left">border_color</i>
+<h4>Create Your New Story</h4>
+{{#condition error.length ">" 0}}
+
+<div class="materialert error">
+    <div class="material-icons"><i class="fa fa-exclamation-circle"></i>
+
+    </div>
+    <pan>{{error}}</pan>
+
+    <button type="button" class="close-alert">×</button>
+</div>
+
+{{/condition}}
+
+
+<div class="row">
+    <form action="/stories" method="POST" class="col s12" enctype="multipart/form-data">
+        <div class="row">
+
+            <div class="input-field">
+                <input type="text" id="title" name="title" class="validate" required>
+                <label for="title">Title</label>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select id="status" name="status">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+
+                <h5>Tell Us Your Story:</h5>
+                <textarea id="body" name="body"></textarea>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <p>You will get randomized image if no uploaded photo!</p>
+            <div class="file-field input-field">
+
+                <div class="btn grey">
+                    <span>Upload Your Entry Post Image</span>
+                    <input name="image" type="file">
+                </div>
+                <div class="file-path-wrapper">
+
+                    <input class="file-path" type="text">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <button type="submit" name="action" class="btn waves-effect waves-light">Post<i
+                    class="material-icons right">send</i></button>
+            <a href="/dashboard" class="btn orange">Cancel<i class="material-icons right">close</i></a>
+        </div>
+    </form>
+</div>

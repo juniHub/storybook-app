@@ -1,0 +1,45 @@
+<i class="material-icons left">border_color</i>
+<h4>Edit Your Story</h4>
+<div class="row">
+
+    <form action="/stories/{{story._id}}" method="POST" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="title" name="title" value="{{story.title}}">
+                <label for="title">Title</label>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select id="status" name="status">
+                    {{#select story.status}}
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                    {{/select}}
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Tell Us Your Story:</h5>
+                <textarea id="body" name="body">{{story.body}}</textarea>
+            </div>
+
+        </div>
+        <div class="row">
+            <img src="{{story.image}}" class="responsive-img img-small" alt="image">
+
+        </div>
+
+        <div class="row">
+            <button type="submit" name="action" class="btn waves-effect waves-light">Save<i
+                    class="material-icons right">send</i></button>
+            <a href="/dashboard" class="btn orange">Cancel<i class="material-icons right">close</i></a>
+        </div>
+    </form>
+</div>
