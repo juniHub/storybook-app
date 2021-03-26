@@ -26,11 +26,11 @@ h3 {
 }
 
 .card {
-  background-color: orange;
+  background-color: #f582ae;
 }
 
 body {
-  background-color: #fff8f0;
+  background: #fef6e4;
   font-family: 'Maven Pro', sans-serif;
   font-size: 1rem !important;
 }
