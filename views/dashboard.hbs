@@ -1,5 +1,4 @@
 <h3>Welcome {{name}}</h3>
-<p>Here are your stories</p>
 
 {{#condition success.length ">" 0}}
 
@@ -13,7 +12,7 @@
 
 
 {{#if stories}}
-<table class="centered highlight">
+<table class="responsive-table">
     <thead>
         <tr>
             <th>Title</th>
@@ -33,13 +32,13 @@
             <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
             <td><span class="dash-status">{{status}}</span></td>
             <td>
-                <a href="/stories/edit/{{_id}}" class="btn btn-float">
+                <a href="/stories/edit/{{_id}}" class="btn btn-float indigo lighten-1">
                     <i class="fas fa-edit"></i>
                 </a>
 
                 <form action="/stories/{{_id}}" method="POST" id="delete-form">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn red">
+                    <button type="submit" class="btn btn-float blue-grey lighten-2">
                         <i class="fas fa-trash"></i>
                     </button>
                 </form>

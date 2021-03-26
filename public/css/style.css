@@ -8,29 +8,37 @@ li a,
 label,
 h4,
 h5,
-h6 {
+h6,
+th
+ {
   font-size: 1.5rem !important;
-  color: darkcyan;
+  color: #5c6bc0;
 }
 
 strong {
-  color: purple;
-  border-bottom: solid 2px orange;
+  color: #f582ae;
 }
+
+strong:hover {
+  color: #8bd3dd;
+}
+
 
 h1,
 h2,
 h3 {
-  font-size: 3rem !important;
-  color: #392f5a;
+  font-size: 2.5rem !important;
+  color: #f582ae;
 }
 
 .card {
-  background-color: #f582ae;
+  background: #fef6e4;
+  color: #232946;
 }
 
 body {
-  background: #fef6e4;
+  background: #232946;
+  color: #fffffe;
   font-family: 'Maven Pro', sans-serif;
   font-size: 1rem !important;
 }
@@ -95,11 +103,11 @@ body {
   right: 5px;
 }
 .materialert.info {
-  background-color: #039be5;
+  background-color: #5c6bc0;
   color: #fff;
 }
 .materialert.success {
-  background-color: #43a047;
+  background-color: #5c6bc0;
   color: #fff;
 }
 .materialert.error {
@@ -112,14 +120,14 @@ body {
 }
 .materialert.warning {
   background-color: #fbc02d;
-  color: #fff;
+  color: #232946;
 }
 
 .highlighted {
   font-size: 20px;
-  color: purple !important;
+  
 }
 
-.highlighted:hover{
-  background-color: orange;
-}
+
+
+
