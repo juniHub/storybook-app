@@ -58,8 +58,12 @@ body {
 
 .btn-float {
   float: left;
-  margin-right: 10px;
-  margin-top: 10px;
+  margin: 0 2rem 2rem 2rem;
+ 
+}
+
+.card-action{
+  height: 80px !important;
 }
 
 .red {
@@ -107,8 +111,8 @@ body {
   color: #fff;
 }
 .materialert.success {
-  background-color: #5c6bc0;
-  color: #fff;
+  background-color: #8bd3dd;
+  color: #232946;
 }
 .materialert.error {
   background-color: #c62828;
@@ -130,7 +134,37 @@ body {
 
  .input-field input[type=text] {
    color: white;
+   margin-top: 1rem !important;
+ }
+ 
+ .title-label {
+   color: #5c6bc0 !important;
+ }
+
+ ul li {
+   list-style-type: square !important;
+   margin-left: 2rem;
+ }
+
+ table,
+ th,
+ td {
+   border: 1px solid #232946 !important;
+  
+   border-collapse: collapse;
+ }
+
+ th,
+ td {
+   padding: 1rem;
+   text-align: left;
+ }
+
+ .dashboard-img{
+   width: 300px !important;
+   height: 200px !important;
+  
 
  }
 
-
+ 

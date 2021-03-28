@@ -12,41 +12,59 @@
 
 
 {{#if stories}}
-<table class="responsive-table">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Image</th>
-            <th>Date</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each stories}}
-        <tr>
-            <td><a class="highlighted" href="/stories/{{_id}}"><strong>{{title}}</strong></a></td>
+<div class="row">
+    {{#each stories}}
+    <div class="col s12 m3">
+        <div class="card sticky-action">
 
-            <td><img width="80" height="80" src="{{image}}" class="responsive-img" alt="image"></td>
+            <div class="card-image waves-effect waves-block waves-light"><img class="dashboard-img" src="{{image}}"
+                    alt="story-image">
 
-            <td>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</td>
-            <td><span class="dash-status">{{status}}</span></td>
-            <td>
-                <a href="/stories/edit/{{_id}}" class="btn btn-float indigo lighten-1">
+            </div>
+
+            <div class="card-content center-align">
+                <span class="card-title activator grey-text text-darken-4"><a class="highlighted"
+                        href="/stories/{{_id}}"><strong>{{title}}</strong></a><i
+                        class="material-icons right">more_vert</i></span>
+
+                <p>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</p>
+                <br>
+                <span class="chip">{{status}}
+
+                </span>
+            </div>
+
+
+            <div class="card-action">
+
+                <a href="/stories/edit/{{_id}}" class="btn-float btn indigo lighten-1">
                     <i class="fas fa-edit"></i>
                 </a>
 
                 <form action="/stories/{{_id}}" method="POST" id="delete-form">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-float blue-grey lighten-2">
+                    <button type="submit" class="btn-float btn blue-grey lighten-2">
                         <i class="fas fa-trash"></i>
                     </button>
                 </form>
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+
+            </div>
+
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><a class="highlighted"
+                        href="/stories/{{_id}}"><strong>{{title}}</strong></a>
+                    <i class="material-icons right">close</i>
+
+                </span>
+                <p>{{stripTags (truncate body 150)}}
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    {{/each}}
+</div>
 {{else}}
 <p>You have not created any stories</p>
 {{/if}}
