@@ -17,10 +17,14 @@
     <div class="col s12 m3">
         <div class="card sticky-action">
 
-            <div class="card-image waves-effect waves-block waves-light"><img class="dashboard-img" src="{{image}}"
-                    alt="story-image">
+            <div class="card-image waves-effect waves-block waves-light">
+                <a class="highlighted" href="/stories/{{_id}}">
+                    <img class="dashboard-img" src="{{image}}" alt="story-image">
+                </a>
 
             </div>
+
+
 
             <div class="card-content center-align">
                 <span class="card-title activator grey-text text-darken-4"><a class="highlighted"
@@ -48,9 +52,11 @@
                     </button>
                 </form>
 
+
             </div>
 
-            <div class="card-reveal">
+
+            <div class="card-reveal post-body">
                 <span class="card-title grey-text text-darken-4"><a class="highlighted"
                         href="/stories/{{_id}}"><strong>{{title}}</strong></a>
                     <i class="material-icons right">close</i>

@@ -63,16 +63,12 @@ body {
 }
 
 .card-action{
-  height: 80px !important;
+  height: 120px !important;
 }
 
 .red {
   margin-right: 10px;
   margin-top: 10px;
-}
-
-.img-small {
-  width: 180px;
 }
 
 .materialert {
@@ -165,6 +161,47 @@ body {
    height: 200px !important;
   
 
+ }
+
+ .post-body p {
+   word-break: break-all;
+ }
+
+ img {
+   max-width: 100%;
+   height: auto;
+ }
+
+ .card-action-show-page{
+   display: flex;
+   flex-direction: column;
+  
+   justify-content: center;
+   align-items: center;
+ 
+   margin: 4rem auto;
+
+ }
+
+ .social-button-group{
+    margin-top: 1rem;
+    text-align: center;
+ }
+
+ .tweet-btn {
+    margin-top: 1rem;
+ }
+
+ .user-name{
+   margin-top: 1rem;
+   text-transform: uppercase;
+ }
+
+ .print-btn{
+
+   float: right;
+   margin-left: 2rem;
+ 
  }
 
  

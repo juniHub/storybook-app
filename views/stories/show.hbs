@@ -1,31 +1,70 @@
 <div class="row">
-    <div class="col s12 m9">
+    <div class="col s12 m12">
         <h3>{{story.title}}
             <small>{{{editIcon story.user user story._id false}}}</small>
         </h3>
+
+        <div class="print-btn">
+            <button class="btn tooltipped" data-position="top" data-tooltip="PRINT THIS PAGE" onClick="window.print()">
+                <i class="material-icons">local_printshop</i>
+            </button>
+
+        </div>
+
+
+
+        <div class="card-title">
+
+            <span class="">Posted by {{story.user.displayName}}</span>
+            <span class="">on {{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
+
+
+        </div>
+
         <div class="card story">
-            <div class="card-content">
-                <span class="card-title">{{formatDate date 'MMMM Do YYYY, h:mm:ss a'}}</span>
-                <p>{{{story.body}}}</p>
+
+            <div class="card-content post-body">
+
+                <p> {{{story.body}}}</p>
+
             </div>
 
-            <div class="card-content">
+            <div class="card-content post-img">
                 <span class="card-title">Your Photo of Day</span>
-                <img src="{{story.image}}" class="responsive-img img-medium" alt="image">
+                <img src="{{story.image}}" class="responsive-img" alt="post-image">
             </div>
 
 
         </div>
-    </div>
-    <div class="col s12 m3">
-        <div class="card center-align">
-            <div class="card-content">
-                <span class="card-title">{{story.user.displayName}}</span>
-                <img src="{{story.user.image}}" class="circle responsive-img img-small">
+
+        <div class="card-action card-action-show-page">
+            <img src="{{story.user.image}}" width="80" height="80" class="circle responsive-img">
+            <a class="user-name" href="/stories/user/{{story.user._id}}"><strong>More From
+                    {{story.user.firstName}}</strong></a>
+
+            <div class="social-button-group">
+
+                <div class="fb-btn">
+
+
+                    <div class="fb-share-button" data-href="https://materializecss.com/tooltips.html"
+                        data-layout="button_count">
+                    </div>
+
+                </div>
+
+                <div class="tweet-btn">
+
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
+                        Tweet</a>
+                </div>
+
             </div>
-            <div class="card-action">
-                <a href="/stories/user/{{story.user._id}}"><strong>More From {{story.user.firstName}}</strong></a>
-            </div>
+
+
+
         </div>
+
     </div>
+
 </div>
