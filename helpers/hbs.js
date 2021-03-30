@@ -10,12 +10,12 @@ module.exports = {
       new_str = str.substr(0, len);
       new_str = str.substr(0, new_str.lastIndexOf(' '));
       new_str = new_str.length > 0 ? new_str : str.substr(0, len);
-      return new_str + '...';
+      return new_str + '...read more';
     }
     return str;
   },
   stripTags: function (input) {
-    return input.replace(/<(?:.|\n)*?>/gm, '');
+    return input.replace(/<[^>]*>?/gm, '');
   },
 
   editIcon: function (storyUser, loggedUser, storyId, floating = true) {
