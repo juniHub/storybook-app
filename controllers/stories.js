@@ -83,7 +83,12 @@ module.exports.createStory = async (req, res, next) => {
 // @route   GET /stories/:id
 module.exports.showStory = async (req, res) => {
   try {
-    const story = await Story.findById(req.params.id).populate('user').lean();
+    const story = await Story.findById( req.params.id ).populate( 'user' ).lean();
+    
+      if (!story.user) {
+        req.flash('error', 'You are not authorized to access this story');
+        return res.render('/');
+    }
 
       if ( !story )
       {
@@ -92,7 +97,8 @@ module.exports.showStory = async (req, res) => {
     }
 
     if (story.user._id != req.user.id && story.status == 'private') {
-        res.render('error/404');
+        req.flash('error', 'You are not authorized to access this story');
+        return res.render('/');
     }
     
     else
