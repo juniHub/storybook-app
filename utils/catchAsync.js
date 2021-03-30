@@ -1,7 +1,5 @@
-module.exports = (req, res, next) => {
-  if (!req.user) {
-    return res.status(401).send({ error: "You must log in!" });
-  }
-
-  next();
-};
+module.exports = func => {
+    return (req, res, next) => {
+        func(req, res, next).catch(next);
+    }
+}
