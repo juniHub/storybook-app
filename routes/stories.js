@@ -11,12 +11,12 @@ const upload = multer( { storage } );
 router.get('/add', ensureAuth, stories.renderNewForm)
 
 router.route('/')
-    .get(catchAsync(stories.index))
+    .get(ensureAuth, catchAsync(stories.index))
     .post(ensureAuth, upload.single('image'), catchAsync(stories.createStory))
 
 
 router.route('/:id')
-    .get(catchAsync(stories.showStory))
+    .get(ensureAuth, catchAsync(stories.showStory))
     .put(ensureAuth, upload.single('image'), catchAsync(stories.updateStory))
     .delete(ensureAuth, catchAsync(stories.deleteStory));
 

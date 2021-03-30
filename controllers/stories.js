@@ -39,7 +39,7 @@ module.exports.createStory = async (req, res, next) => {
     
     if ( req.body.body === "" || req.body.body === "undefined")
     {
-        req.flash( 'error', 'Are you sure no content here? Please tell us your story, then try again?' );
+        req.flash( 'error', 'body content is required!' );
         return res.redirect( 'stories/add' );
        
      }
@@ -53,7 +53,7 @@ module.exports.createStory = async (req, res, next) => {
       else
       {
         
-           story.image = "https://picsum.photos/200/200?grayscale";
+           story.image = "https://picsum.photos/300/300?grayscale";
            story.imageId = "null";
       }
     
@@ -85,13 +85,9 @@ module.exports.showStory = async (req, res) => {
   try {
     const story = await Story.findById( req.params.id ).populate( 'user' ).lean();
     
-      if (!story.user) {
-        req.flash('error', 'You are not authorized to access this story');
-        return res.render('/');
-    }
-
-      if ( !story )
-      {
+    
+    if ( !story )
+    {
         req.flash('error', 'Cannot find that story!');
         return res.render('error/404');
     }
