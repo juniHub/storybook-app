@@ -1,18 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
 
+body {
+
+  color: #fffffe;
+  background: #232946;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 1rem !important;
+}
+
+.card {
+
+  color: #172c66;
+  background: #fef6e4;
+
+  max-width: 100%;
+  margin: 2rem auto 2rem auto;
+  -webkit-box-shadow: 0 10px 6px -6px gray;
+  -moz-box-shadow: 0 10px 6px -6px gray;
+  box-shadow: 0 10px 6px -6px gray;
+
+
+}
+
+.login-container {
+ 
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #172c66;
+  background: #fef6e4;
+
+  max-width: 500px;
+  min-height: 100vh;
+  margin: 2rem auto 2rem auto;
+  padding: 1rem;
+  -webkit-box-shadow: 0 10px 6px -6px gray;
+  -moz-box-shadow: 0 10px 6px -6px gray;
+  box-shadow: 0 10px 6px -6px gray;
+
+
+}
+
+
+
 p {
   margin: 10px 0 !important;
 }
+
+h1,
+h2,
+h3 {
+  font-size: 2.5rem !important;
+  color: #8bd3dd;
+}
+
+.title-label{
+  color: #f582ae !important;
+}
+
 
 li a,
 label,
 h4,
 h5,
-h6,
 th
- {
+{
+
   font-size: 1.5rem !important;
-  color: #5c6bc0;
+  color: #f582ae !important;
+}
+
+.lead{
+  color: #8bd3dd !important;
 }
 
 strong {
@@ -23,33 +86,43 @@ strong:hover {
   color: #8bd3dd;
 }
 
-
-h1,
-h2,
-h3 {
-  font-size: 2.5rem !important;
-  color: #f582ae;
+nav a {
+  color: #232946 !important;
 }
 
-.card {
-  background: #fef6e4;
-  color: #232946;
+
+
+.sidenav{
+  background: #232946 !important;
+  overflow: hidden;
+  
 }
 
-body {
-  background: #232946;
-  color: #fffffe;
-  font-family: 'Maven Pro', sans-serif;
-  font-size: 1rem !important;
+.sidenav li{
+  list-style-type: none !important;
+
 }
 
-.login-container {
+.sidenav a{
+  
+  color: #f582ae !important;
+}
+
+.sidenav a:hover {
+
+  color: #8bd3dd !important;
+}
+
+
+.nav-list{
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: center;
+  flex-direction: row;
+
+  justify-content:flex-start;
+
+  padding-left: 1.5rem;
+  margin: 0;
 }
 
 .topnav{ 
@@ -61,18 +134,18 @@ body {
 .heading-sidenav{
   margin: 2rem auto;
   text-align: center;
-}
-
-hr {
-  width: 100% !important;
-  color: #f582ae;
-
+  color: #8bd3dd !important;
 }
 
 .nav-footer span {
+
   margin: 2rem auto !important;
   
-  font-size: 0.8rem !important;
+  font-size: 1rem !important;
+}
+
+.fas.fa-edit{
+  color: #8bd3dd !important;
 }
 
 .fa-small {
@@ -89,10 +162,6 @@ hr {
   height: 100px !important;
 }
 
-.red {
-  margin-right: 10px;
-  margin-top: 10px;
-}
 
 .materialert {
   position: relative;
@@ -156,9 +225,7 @@ hr {
    margin-top: 1rem !important;
  }
  
- .title-label {
-   color: #5c6bc0 !important;
- }
+
 
  ul li {
    list-style-type: square !important;
@@ -179,8 +246,17 @@ hr {
    text-align: left;
  }
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .medium-img{
+    max-width: 400px !important;
+  }
+
  .dashboard-img{
-   width: 300px !important;
+    
    height: 200px !important;
   
 
@@ -190,10 +266,7 @@ hr {
    word-break: break-all;
  }
 
- img {
-   max-width: 100%;
-   height: auto;
- }
+
 
  .card-action-show-page{
    display: flex;
