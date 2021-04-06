@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { ensureAuth, ensureGuest } = require("../middleware/auth");
+const { ensureAuth, ensureGuest } = require( "../middleware/auth" );
 
 //request quote api
 const request = require("request");
@@ -19,21 +19,30 @@ getRandomIndex = (quotes) => {
 
 // @desc    Login/Landing page
 // @route   GET /
-router.get("/", ensureGuest, (req, res) => {
-  request(quoteUrl, (err, response, body) => {
-    const quoteData = JSON.parse(body);
+router.get( "/", ensureGuest, async ( req, res ) =>
+{
+  
+  const stories = await Story.find({ status: 'public' })
+      .sort({ createdAt: 'desc' })
+      .lean();
 
-    const index = getRandomIndex(quoteData.quotes);
+  request( quoteUrl, ( err, response, body ) =>
+  {
+   
+    const quoteData = JSON.parse(body);
+    const index = getRandomIndex( quoteData.quotes ); 
 
     if (err) {
       res.render("login", {
         layout: "login",
+        stories,
         quote: null,
         author: null,
       });
     } else {
       res.render("login", {
         layout: "login",
+        stories,
         quote: quoteData.quotes[index].quote,
         author: quoteData.quotes[index].author,
       });

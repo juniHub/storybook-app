@@ -2,13 +2,14 @@ const Story = require( '../models/Story' );
 const { cloudinary } = require("../cloudinary");
 
 
-// @desc    Show all stories
+// @desc    Show all stories on homepage
+
 // @route   GET /stories
 module.exports.index = async (req, res) => {
   try {
     const stories = await Story.find({ status: 'public' })
       .populate('user')
-      .sort({ createdAt: 'desc' })
+      .sort({ createdAt: -1 })
       .lean();
 
     res.render('stories/index', {
@@ -220,7 +221,8 @@ module.exports.userStories = async (req, res) => {
       user: req.params.userId,
       status: 'public',
     })
-      .populate('user')
+      .populate( 'user' )
+      .sort({ createdAt: -1 })
       .lean();
 
     res.render('stories/index', {

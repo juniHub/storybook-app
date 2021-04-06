@@ -1,19 +1,49 @@
-<h3><i class="fas fa-book"></i> Welcome to Juni HUB</h3>
-<div class="section">
+<div class="login-container" id="login">
 
-    <h4><strong><i class="fas fa-quote-left"></i>&nbsp;{{quote}}</strong></h5>
-        <h6>-{{author}}</h6>
+    <h3><a href="#stories" class="login-title"><i class="fas fa-book"></i> Welcome to Juni HUB</a></h3>
+    <div class="section">
 
-        <p class="lead"><em>People have their own story, what about you?</em></p>
+        <h4><strong><i class="fas fa-quote-left"></i>&nbsp;{{quote}}</strong></h5>
+            <h6>-{{author}}</h6>
 
+            <p class="lead"><em>People have their own story, what about you?</em></p>
+
+    </div>
+
+    <div class="section">
+        <div class="card-action">
+            <a href="/auth/google" class="btn">
+                <i class="fab fa-google left"></i>LOG IN WITH GOOGLE </a>
+        </div>
+
+        <div class="card-image">
+            <img src="/assets/login.svg" class="responsive-img medium-img">
+        </div>
+
+    </div>
 </div>
 
-<div class="section">
-    <div class="card-action">
-        <a href="/auth/google" class="btn">
-            <i class="fab fa-google left"></i>LOG IN WITH GOOGLE </a>
-    </div>
-    <div class="card-image">
-        <img src="/assets/login.svg" class="responsive-img img-medium">
+<div id="stories">
+    <h1>All Public Stories</h1>
+    <div class="row">
+        {{#each stories}}
+        <div class="col s12 m4">
+            <div class="card home-stories">
+
+                <div class="card-content home-stories-body">
+                    <h5 class="center-align">{{title}}</h5>
+                    <p>{{stripTags (truncate body 150)}}</p>
+
+                </div>
+                <div class=" card-action center-align">
+                    <a href="#login" class="btn">
+                        <i class="fas fa-user-lock left"></i>Login to View More </a>
+                </div>
+
+            </div>
+        </div>
+        {{else}}
+        <p>No stories to display</p>
+        {{/each}}
     </div>
 </div>
