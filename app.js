@@ -56,7 +56,8 @@ const {
   truncate,
   editIcon,
   select,
-  condition
+  condition,
+ 
 } = require('./helpers/hbs');
 
 //handlebars
@@ -69,7 +70,8 @@ app.engine(
       truncate,
       editIcon,
       select,
-      condition
+      condition,
+     
     },
     defaultLayout: 'main',
     extname: '.hbs',

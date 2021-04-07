@@ -1,4 +1,6 @@
-const moment = require('moment');
+const moment = require( 'moment' );
+
+var he = require('he');
 
 module.exports = {
   formatDate: function (date, format) {
@@ -14,9 +16,13 @@ module.exports = {
     }
     return str;
   },
+
   stripTags: function (input) {
-    return input.replace(/<[^>]*>?/gm, '');
+    const stripedHtml = input.replace( /<[^>]+>/g, '' );
+    return he.decode(stripedHtml);
   },
+
+  
 
   editIcon: function (storyUser, loggedUser, storyId, floating = true) {
     if (storyUser._id.toString() == loggedUser._id.toString()) {
