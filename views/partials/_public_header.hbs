@@ -1,26 +1,25 @@
-<nav class="pink accent-1">
+<nav class="nav-bg">
     <div class="nav-wrapper container">
-        <div class="topnav">
+        <div class="top-nav">
 
-            <a href="/" class="logo"> <img width="50" height="50" src="/assets/logo.png"
-                    class="responsive-img circle">Juni
-                HUB</a>
+            <a href="/" class="brand-logo">juniHUB</a>
 
             <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large right">
-                <i class="fas fa-bars"></i> Explore</a>
+                <i class="fas fa-bars"></i> EXPLORE</a>
 
         </div>
 
         <ul class="sidenav" id="mobile-demo">
-            <li class="heading-sidenav"><img width="100" height="100" src="/assets/logo.png"
-                    class="logo-img responsive-img">
-                <br>
+
+            <li class="heading-sidenav"><a href="/"><img width="100" height="100" src="/assets/logo.png"
+                        class="logo-img responsive-img"></a>
 
             </li>
 
+            <br>
+
             <li class="nav-list"><i class="fas fa-umbrella"></i><a href="https://juni-weather.netlify.app/"
-                    target="_blank" rel="noopener noreferrer">Weather
-                    Forecast</a></li>
+                    target="_blank" rel="noopener noreferrer">Weather</a></li>
             <li class="nav-list"></i><i class="fas fa-check"></i><a href="https://juni-todo-list.netlify.app/"
                     target="_blank" rel="noopener noreferrer">Todo List</a>
             </li>
@@ -40,6 +39,12 @@
                 <hr>
             </li>
             <li class="nav-footer"><a href="#"><span>© juniHUB 2021.</span></a></li>
+
+            <li class="nav-footer btn-login">
+                <a href="/auth/google" class="btn deep-purple lighten-3">
+                    <i class="fab fa-google"></i>LOGIN WITH GOOGLE
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

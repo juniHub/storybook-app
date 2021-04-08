@@ -41,13 +41,13 @@
 
             <div class="card-action">
 
-                <a href="/stories/edit/{{_id}}" class="btn-float btn">
-                    <i class="fas fa-edit"></i>
+                <a href="/stories/edit/{{_id}}" class="btn-float btn light-blue lighten-3">
+                    <i class="fas fa-edit "></i>
                 </a>
 
                 <form action="/stories/{{_id}}" method="POST" id="delete-form">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn-float btn pink accent-1">
+                    <button type="submit" class="delete-btn btn-float btn">
                         <i class="fas fa-trash"></i>
                     </button>
                 </form>

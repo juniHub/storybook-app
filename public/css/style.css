@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
 
-body {
+
+html, body {
+
+  padding: 0;
+  margin: 0;
 
   color: #fffffe;
   background: #232946;
-  font-family: 'Maven Pro', sans-serif;
-  font-size: 1rem !important;
-  
-}
-
-html {
+  font-family: 'Baloo Thambi 2',
+  cursive;
   scroll-behavior: smooth;
+
+  
 }
 
 .card {
@@ -30,7 +32,7 @@ html {
 .login-container {
  
 
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,6 +63,11 @@ html {
 
   color: #8bd3dd !important;
   
+}
+
+.login-story-title {
+
+ color: #9656a1 !important;
 }
 
 .home-stories {
@@ -95,8 +102,13 @@ h3 {
   color: #8bd3dd;
 }
 
+.nav-bg {
+ background-color: #9656a1;
+ 
+}
+
 .title-label{
-  color: #f582ae !important;
+  color: #9656a1 !important;
 }
 
 
@@ -108,15 +120,17 @@ th
 {
 
   font-size: 1.5rem !important;
-  color: #f582ae !important;
+  color: #9656a1 !important;
 }
+
+
 
 .lead{
   color: #8bd3dd !important;
 }
 
 strong {
-  color: #f582ae;
+  color: #9656a1;
 }
 
 strong:hover {
@@ -131,7 +145,7 @@ nav a {
 
 .sidenav{
   background: #232946 !important;
-  overflow: hidden;
+  overflow: scroll;
   
 }
 
@@ -142,7 +156,7 @@ nav a {
 
 .sidenav a{
   
-  color: #f582ae !important;
+  color: #9656a1 !important;
 }
 
 .sidenav a:hover {
@@ -150,6 +164,9 @@ nav a {
   color: #8bd3dd !important;
 }
 
+.btn-login a:hover{
+  color: #232946 !important
+}
 
 .nav-list{
 
@@ -162,10 +179,9 @@ nav a {
   margin: 0;
 }
 
-.topnav{ 
 
-  padding: 1rem auto !important;
-
+.brand-logo{
+  font-size: 1.5rem !important;
 }
 
 .heading-sidenav{
@@ -174,25 +190,31 @@ nav a {
   color: #8bd3dd !important;
 }
 
-.nav-footer span {
+.nav-footer a {
 
-  margin: 2rem auto !important;
-  
-  font-size: 1rem !important;
+  margin: 1.5rem 0.5rem !important;
+ 
+  font-size: 0.8rem !important;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+ 
 }
 
 .fas.fa-edit{
-  color: #8bd3dd !important;
+  color: #9656a1 !important;
 }
 
-.fa-small {
-  font-size: 16px !important;
-}
 
 .btn-float {
   float: left;
   margin: 0 2rem 2rem 2rem;
- 
+  
+}
+
+.delete-btn {
+  background-color: #9656a1;
 }
 
 .card-action{
@@ -290,6 +312,7 @@ nav a {
 
   .medium-img{
     max-width: 500px !important;
+    width: 100%;
   }
 
  .dashboard-img{
