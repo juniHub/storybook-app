@@ -28,25 +28,56 @@
 
 <div id="stories">
     <h1>All Public Stories</h1>
+    {{#if stories}}
     <div class="row">
         {{#each stories}}
-        <div class="col s12 m4">
-            <div class="card home-stories">
+        <div class="col s12 m3">
+            <div class="card sticky-action">
 
-                <div class="card-content home-stories-body">
-                    <h5 class="center-align"><a href="#login" class="login-story-title">{{title}}</a></h5>
-                    <p>{{stripTags (truncate body 150)}}</p>
+                <div class="card-image waves-effect waves-block waves-light">
+                    <a class="highlighted" href="#login">
+                        <img class="dashboard-img" src="{{image}}" alt="story-image">
+                    </a>
 
                 </div>
-                <div class=" card-action center-align">
+
+                <div class="card-content center-align">
+                    <span class="card-title activator grey-text text-darken-4"><a class="highlighted"
+                            href="#login"><strong>{{title}}</strong></a><i
+                            class="material-icons right">more_vert</i></span>
+
+                    <p class="chip">{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</p>
+                    <br>
+
+                </div>
+
+
+                <div class="card-action center-align">
+
                     <a href="#login" class="btn">
                         <i class="fas fa-user-lock left"></i>Login to View More </a>
+
+
+                </div>
+
+
+                <div class="card-reveal post-body">
+                    <span class="card-title grey-text text-darken-4"><a class="highlighted"
+                            href="#login"><strong>{{title}}</strong></a>
+                        <i class="material-icons right">close</i>
+
+                    </span>
+                    <p>{{stripTags (truncate body 150)}} </p>
+
                 </div>
 
             </div>
+
         </div>
-        {{else}}
-        <p>No stories to display</p>
         {{/each}}
     </div>
+    {{else}}
+    <p>You have not created any stories</p>
+    {{/if}}
+
 </div>

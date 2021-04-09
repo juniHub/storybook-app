@@ -55,7 +55,7 @@ html, body {
 
 .login-title {
   
-  color: #232946 !important;
+  color: #9656a1 !important;
   font-weight: 900;
 }
 
@@ -102,10 +102,6 @@ h3 {
   color: #8bd3dd;
 }
 
-.nav-bg {
- background-color: #9656a1;
- 
-}
 
 .title-label{
   color: #9656a1 !important;
@@ -137,8 +133,13 @@ strong:hover {
   color: #8bd3dd;
 }
 
+.nav-bg {
+  background-color: #9656a1;
+
+}
+
 nav a {
-  color: #232946 !important;
+  color: #fef6e4 !important;
 }
 
 
@@ -192,7 +193,7 @@ nav a {
 
 .nav-footer a {
 
-  margin: 1.5rem 0.5rem !important;
+  margin: 1.5rem 0.6rem !important;
  
   font-size: 0.8rem !important;
   display: flex;

@@ -1,6 +1,9 @@
 const Story = require( '../models/Story' );
 const { cloudinary } = require("../cloudinary");
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
 // @desc    Show all stories on homepage
 
@@ -33,6 +36,7 @@ module.exports.renderNewForm = (req, res) => {
 module.exports.createStory = async (req, res, next) => {
   
   req.body.user = req.user.id;
+  const seed = getRandomInt( 100 );
 
   try
   {
@@ -54,7 +58,7 @@ module.exports.createStory = async (req, res, next) => {
       else
       {
         
-           story.image = "https://picsum.photos/300/300?grayscale";
+           story.image = `https://picsum.photos/300?random=${seed}`;
            story.imageId = "null";
       }
     
