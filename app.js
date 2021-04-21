@@ -9,12 +9,11 @@ const methodOverride = require('method-override');
 const passport = require('passport');
 const session = require( 'express-session' );
 const flash = require( 'connect-flash' );
-const MongoStore = require('connect-mongo')(session);
+const MongoStore = require( 'connect-mongo' )( session );
 
 const connectDB = require('./config/db');
 
 //load config
-//dotenv.config({ path: './config/config.env' });
 
 if (process.env.NODE_ENV !== "production") {
     dotenv.config({ path: './config/config.env' });
@@ -27,6 +26,7 @@ require('./config/passport')(passport);
 connectDB();
 
 const app = express();
+
 
 //body parser
 app.use(express.urlencoded({ extended: true }));
@@ -117,14 +117,17 @@ app.use( (req, res, next) => {
 
 //Routes
 
-app.use('/', require('./routes/index'));
+app.use( '/', require( './routes/index' ) );
+
 app.use('/auth', require('./routes/auth'));
 app.use( '/stories', require( './routes/stories' ) );
 
 
 const port = process.env.PORT || 3000;
 
+
 app.listen(
   port,
-  console.log(`Server running on port ${port}`)
+  console.log( `Server running on port ${ port }` )
+  
 );

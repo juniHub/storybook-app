@@ -363,4 +363,73 @@ nav a {
  
  }
 
- 
+ .btn{
+   border-radius: 35px;
+ }
+
+ .weather-area {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.5rem;
+ }
+
+ .city-input{
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+ }
+
+ .weather-display{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   margin: 0.5rem;
+   color: purple;
+   
+ }
+
+ .today-date{
+   color: #8bd3dd;
+   background: #232946;
+   font-size: 1rem;
+
+ }
+
+ /* The Image container */
+ .img-hover-zoom {
+   height: 300px;
+   /* Modify this according to your need */
+   overflow: hidden;
+   /* Removing this will break the effects */
+ }
+
+ /* Quick-zoom Container */
+ .img-hover-zoom--quick-zoom img {
+   transform-origin: 0 0;
+   transition: transform .25s, visibility .25s ease-in;
+ }
+
+ /* The Transformation */
+ .img-hover-zoom--quick-zoom:hover img {
+   transform: scale(2);
+ }
+
+ /* Point-zoom Container */
+ .img-hover-zoom--point-zoom img {
+   transform-origin: 65% 75%;
+   transition: transform 1s, filter .5s ease-out;
+ }
+
+ /* The Transformation */
+ .img-hover-zoom--point-zoom:hover img {
+   transform: scale(5);
+ }
