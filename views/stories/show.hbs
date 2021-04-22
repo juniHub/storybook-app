@@ -1,70 +1,77 @@
 <div class="row">
-    <div class="col s12 m12">
+    <div class="col s12 m11">
         <h3>{{story.title}}
             <small>{{{editIcon story.user user story._id false}}}</small>
         </h3>
+    </div>
+    <div class="col s12 m1">
+        <div class='profile-section'>
 
-        <div class="print-btn">
-            <button class="btn tooltipped" data-position="top" data-tooltip="PRINT THIS PAGE" onClick="window.print()">
-                <i class="material-icons">local_printshop</i>
-            </button>
-
-        </div>
-
-
-
-        <div class="card-title">
-
-            <span class="">Posted by {{story.user.displayName}}</span>
-            <span class="">on {{formatDate story.createdAt "MMMM Do YYYY, h:mm:ss a"}}</span>
-
-
-        </div>
-
-        <div class="card story">
-
-            <div class="card-content post-body">
-
-                <p> {{{story.body}}}</p>
-
-            </div>
-
-            <div class="card-content post-img">
-                <span class="card-title">Your Photo of Day</span>
-                <img src="{{story.image}}" class="responsive-img medium-img" alt="post-image">
-            </div>
-
-
-        </div>
-
-        <div class="card-action card-action-show-page">
-            <img src="{{story.user.image}}" width="80" height="80" class="circle responsive-img">
+            <img src="{{story.user.image}}" width="80" height="80" class="responsive-img">
             <a class="user-name" href="/stories/user/{{story.user._id}}"><strong>More From
                     {{story.user.firstName}}</strong></a>
 
-            <div class="social-button-group">
+        </div>
+    </div>
+</div>
 
-                <div class="fb-btn">
+<div class="print-btn">
+    <button class="btn tooltipped" data-position="top" data-tooltip="PRINT THIS PAGE" onClick="window.print()">
+        <i class="material-icons">local_printshop</i>
+    </button>
+
+</div>
 
 
-                    <div class="fb-share-button" data-href="https://juni-storybook.herokuapp.com/stories/{{story._id}}"
-                        data-layout="button_count">
-                    </div>
 
-                </div>
+<div class="card-title">
 
-                <div class="tweet-btn">
+    <span class="">Posted by {{story.user.displayName}}</span>
+    <span class="">on {{formatDate story.createdAt "MMMM Do YYYY, h:mm:ss a"}}</span>
 
-                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
-                        Tweet</a>
-                </div>
 
+</div>
+
+<div class="card story">
+
+    <div class="card-content post-body">
+
+        <p> {{{story.body}}}</p>
+
+    </div>
+
+    <div class="card-content post-img">
+        <span class="card-title">Your Photo of Day</span>
+        <img src="{{story.image}}" class="responsive-img medium-img" alt="post-image">
+    </div>
+
+
+</div>
+
+<div class="card-action card-action-show-page">
+
+
+    <div class="social-button-group">
+
+        <div class="fb-btn">
+
+
+            <div class="fb-share-button" data-href="https://juni-storybook.herokuapp.com/stories/{{story._id}}"
+                data-layout="button_count">
             </div>
-
-
 
         </div>
 
+        <div class="tweet-btn">
+
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
+                Tweet</a>
+        </div>
+
     </div>
+
+
+
+</div>
 
 </div>

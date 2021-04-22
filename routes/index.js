@@ -49,7 +49,7 @@ router.get( "/", ensureGuest, async ( req, res ) =>
         layout: "login",
         stories,
         quote: "If you want to lift yourself up, lift up someone else.", author: "Booker T. Washington",
-        weather: null, main: null, temp: null, tempF:null, icon: "/assets/tent.svg", today
+        weather: null, temp: null, tempF:null, icon: "/assets/tent.svg", today, error: null
       });
     } else {
       res.render("login", {
@@ -57,7 +57,7 @@ router.get( "/", ensureGuest, async ( req, res ) =>
         stories,
         quote: quoteData.quotes[index].quote,
         author: quoteData.quotes[ index ].author,
-        weather: null, main: null, temp: null, tempF:null, icon: "/assets/tent.svg", today
+        weather: null, temp: null, tempF:null, icon: "/assets/tent.svg", today, error: null
       });
     }
   });
@@ -104,11 +104,10 @@ router.post( '/',  ensureGuest, async ( req, res ) =>
         stories,
         quote: "If you want to lift yourself up, lift up someone else.", author: "Booker T. Washington",
        
-        weather: null, main: null, temp: null, tempF: null, icon: "/assets/tent.svg", today
+        weather: null, temp: null, tempF: null, icon: "/assets/tent.svg", today,  error: 'Enter city name!'
       } );
 
-       req.flash( 'error', 'Enter city name!' );
-      
+           
     } else
     {
 
@@ -120,10 +119,8 @@ router.post( '/',  ensureGuest, async ( req, res ) =>
           stories,
           quote: "If you want to lift yourself up, lift up someone else.", author: "Booker T. Washington",
           
-          weather: null, main: null, temp: null, tempF: null, icon: "/assets/tent.svg", today
+          weather: null, temp: null, tempF: null, icon: "/assets/tent.svg", today, error: 'Enter city name!'
         } );
-
-        req.flash( 'error', 'Not found. Please try again!' );
 
       } else
       {
@@ -143,7 +140,7 @@ router.post( '/',  ensureGuest, async ( req, res ) =>
           stories,
           quote: "If you want to lift yourself up, lift up someone else.", author: "Booker T. Washington",
          
-          weather: weatherText, main: mainWeather, temp: temperature, tempF: Fdegrees, icon: weatherIcon, today
+          weather: weatherText, temp: temperature, tempF: Fdegrees, icon: weatherIcon, today, error:null
         } );
       }
     }

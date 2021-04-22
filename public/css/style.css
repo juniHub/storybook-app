@@ -25,6 +25,7 @@ html, body {
   -webkit-box-shadow: 0 10px 6px -6px gray;
   -moz-box-shadow: 0 10px 6px -6px gray;
   box-shadow: 0 10px 6px -6px gray;
+  
 
 
 }
@@ -44,13 +45,22 @@ html, body {
 
   width: 100%;
   height: 100%;
-  margin: 2rem auto 2rem auto;
-  padding: 1rem;
+  margin: 2rem auto;
+  padding: 2rem;
   -webkit-box-shadow: 0 10px 6px -6px gray;
   -moz-box-shadow: 0 10px 6px -6px gray;
   box-shadow: 0 10px 6px -6px gray;
 
+ 
+}
 
+.weather-container {
+  width: 100%;
+  height: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  
+ 
 }
 
 .login-title {
@@ -165,8 +175,11 @@ nav a {
   color: #8bd3dd !important;
 }
 
-.btn-login a:hover{
-  color: #232946 !important
+
+.btn-login a{
+  color: white !important;
+  max-width: 200px;
+  
 }
 
 .nav-list{
@@ -200,23 +213,18 @@ nav a {
   justify-content: center;
   text-align: center;
   align-items: center;
+  
  
 }
 
-.fas.fa-edit{
-  color: #9656a1 !important;
+.footer-section{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
 }
 
-
-.btn-float {
-  float: left;
-  margin: 0 2rem 2rem 2rem;
-  
-}
-
-.delete-btn {
-  background-color: #9656a1;
-}
 
 .card-action{
   height: 100px !important;
@@ -329,6 +337,22 @@ nav a {
    word-break: break-all;
  }
 
+ .profile-section {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+ }
+
+ .user-name {
+   margin-top: 1rem;
+   text-transform: uppercase;
+ }
+
 
 
  .card-action-show-page{
@@ -338,22 +362,31 @@ nav a {
    justify-content: center;
    align-items: center;
  
-   margin: 4rem auto;
+   margin: 2rem auto;
 
  }
 
- .social-button-group{
-    margin-top: 1rem;
-    text-align: center;
+ .card-action-dashboard {
+  
+ 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
  }
+
+ .fas.fa-edit {
+   color: #9656a1 !important;
+ }
+
+
+ .delete-btn {
+   background-color: #9656a1;
+ }
+
 
  .tweet-btn {
     margin-top: 1rem;
- }
-
- .user-name{
-   margin-top: 1rem;
-   text-transform: uppercase;
  }
 
  .print-btn{
@@ -374,6 +407,13 @@ nav a {
    align-items: center;
    justify-content: center;
    font-size: 1.5rem;
+   border-radius: 10px;
+   padding: 2rem;
+   background: goldenrod;
+   
+    -webkit-box-shadow: 0 10px 6px -6px gray;
+    -moz-box-shadow: 0 10px 6px -6px gray;
+    box-shadow: 0 10px 6px -6px gray;
  }
 
  .city-input{
@@ -401,7 +441,13 @@ nav a {
    color: #8bd3dd;
    background: #232946;
    font-size: 1rem;
+   min-width: 200px;
+  
 
+ }
+
+ .temp{
+   margin-top: 0.5rem;
  }
 
  /* The Image container */
@@ -423,13 +469,4 @@ nav a {
    transform: scale(2);
  }
 
- /* Point-zoom Container */
- .img-hover-zoom--point-zoom img {
-   transform-origin: 65% 75%;
-   transition: transform 1s, filter .5s ease-out;
- }
-
- /* The Transformation */
- .img-hover-zoom--point-zoom:hover img {
-   transform: scale(5);
- }
+ 
