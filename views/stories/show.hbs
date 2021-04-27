@@ -24,6 +24,7 @@
 
 
 
+
 <div class="card-title">
 
     <span class="">Posted by {{story.user.displayName}}</span>
@@ -32,46 +33,42 @@
 
 </div>
 
-<div class="card story">
+<div class="card show-card">
 
-    <div class="card-content post-body">
+    <div class="card story">
 
-        <p> {{{story.body}}}</p>
+        <div class="card-content post-body">
+
+            <p> {{{story.body}}}</p>
+
+        </div>
+
+        <div class="card-content post-img">
+            <span class="card-title">Your Photo of Day</span>
+            <img src="{{story.image}}" class="responsive-img medium-img" alt="post-image">
+        </div>
+
 
     </div>
 
-    <div class="card-content post-img">
-        <span class="card-title">Your Photo of Day</span>
-        <img src="{{story.image}}" class="responsive-img medium-img" alt="post-image">
-    </div>
+    <div class="card-action card-action-show-page">
 
 
-</div>
+        <div class="social-btn">
 
-<div class="card-action card-action-show-page">
-
-
-    <div class="social-button-group">
-
-        <div class="fb-btn">
-
-
-            <div class="fb-share-button" data-href="https://juni-storybook.herokuapp.com/stories/{{story._id}}"
-                data-layout="button_count">
+            <div class="fb-comments" data-href="https://juni-storybook.herokuapp.com/stories/{{story._id}}"
+                data-width="" data-numposts="5">
             </div>
 
         </div>
 
-        <div class="tweet-btn">
+        <div class="social-btn">
 
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
-                Tweet</a>
+            <div class="fb-like" data-href="https://juni-storybook.herokuapp.com/stories/{{story._id}}" data-width=""
+                data-layout="standard" data-action="like" data-size="small" data-share="true">
+            </div>
+
         </div>
 
     </div>
-
-
-
-</div>
-
 </div>

@@ -353,7 +353,10 @@ nav a {
    text-transform: uppercase;
  }
 
-
+.show-card{
+  background: white;
+  ;
+}
 
  .card-action-show-page{
    display: flex;
@@ -363,6 +366,10 @@ nav a {
    align-items: center;
  
    margin: 2rem auto;
+   padding-bottom: 2rem !important;
+ 
+  
+   height: 100% !important;
 
  }
 
@@ -385,8 +392,12 @@ nav a {
  }
 
 
- .tweet-btn {
+ .social-btn {
     margin-top: 1rem;
+ }
+
+ .social-btn-group{
+     margin: 1rem auto;
  }
 
  .print-btn{
@@ -409,8 +420,8 @@ nav a {
    font-size: 1.5rem;
    border-radius: 10px;
    padding: 2rem;
-   background: goldenrod;
-   
+   background: teal;
+      
     -webkit-box-shadow: 0 10px 6px -6px gray;
     -moz-box-shadow: 0 10px 6px -6px gray;
     box-shadow: 0 10px 6px -6px gray;
@@ -423,6 +434,7 @@ nav a {
   text-align: center;
   align-items: center;
   justify-content: center;
+  color: #fef6e4 !important;
 
  }
 
@@ -433,12 +445,12 @@ nav a {
    align-items: center;
    justify-content: center;
    margin: 0.5rem;
-   color: purple;
+   color: #fef6e4;
    
  }
 
  .today-date{
-   color: #8bd3dd;
+   color: #fef6e4;
    background: #232946;
    font-size: 1rem;
    min-width: 200px;
@@ -448,6 +460,7 @@ nav a {
 
  .temp{
    margin-top: 0.5rem;
+   color: #fef6e4;
  }
 
  /* The Image container */
