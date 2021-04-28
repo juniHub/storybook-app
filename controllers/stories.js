@@ -47,7 +47,9 @@ module.exports.createStory = async (req, res, next) => {
         req.flash( 'error', 'title and body content is required!' );
         return res.redirect( 'stories/add' );
        
-     }
+    }
+    
+   
 
       if ( req.file)
       {

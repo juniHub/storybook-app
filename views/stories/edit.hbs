@@ -6,11 +6,21 @@
         <input type="hidden" name="_method" value="PUT">
         <div class="row">
             <div class="input-field">
-                <input type="text" id="title" name="title" value="{{story.title}}">
+                <input type="text" id="title" name="title" value="{{story.title}}" class="validate" required>
                 <label class="title-label" for="title">Title</label>
             </div>
 
         </div>
+
+        <div class="row">
+
+            <div class="input-field">
+                <input type="text" id="tags" name="tags" value="{{story.tags}}" class="validate" required>
+                <label class="title-label" for="tags">Tags (coma separated)</label>
+            </div>
+
+        </div>
+
 
         <div class="row">
             <div class="input-field">

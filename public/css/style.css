@@ -65,7 +65,7 @@ html, body {
 
 .login-title {
   
-  color: #9656a1 !important;
+  color: teal ;
   font-weight: 900;
 }
 
@@ -73,11 +73,6 @@ html, body {
 
   color: #8bd3dd !important;
   
-}
-
-.login-story-title {
-
- color: #9656a1 !important;
 }
 
 .home-stories {
@@ -114,7 +109,7 @@ h3 {
 
 
 .title-label{
-  color: #9656a1 !important;
+  color: #f582ae !important;
 }
 
 
@@ -126,7 +121,7 @@ th
 {
 
   font-size: 1.5rem !important;
-  color: #9656a1 !important;
+  color: #f582ae !important;
 }
 
 
@@ -136,7 +131,7 @@ th
 }
 
 strong {
-  color: #9656a1;
+  color: #f582ae;
 }
 
 strong:hover {
@@ -144,7 +139,7 @@ strong:hover {
 }
 
 .nav-bg {
-  background-color: #9656a1;
+  background: teal;
 
 }
 
@@ -155,7 +150,7 @@ nav a {
 
 
 .sidenav{
-  background: #232946 !important;
+  background: teal !important;
   overflow: scroll;
   
 }
@@ -165,19 +160,15 @@ nav a {
 
 }
 
-.sidenav a{
-  
-  color: #9656a1 !important;
-}
-
 .sidenav a:hover {
 
-  color: #8bd3dd !important;
+  color: #f582ae !important;
 }
 
 
 .btn-login a{
-  color: white !important;
+  color: #001858 !important;
+  background: #f582ae;
   max-width: 200px;
   
 }
@@ -383,12 +374,14 @@ nav a {
  }
 
  .fas.fa-edit {
-   color: #9656a1 !important;
+   color: #f582ae !important;
+ 
  }
 
 
  .delete-btn {
-   background-color: #9656a1;
+   background: #f582ae;
+   color: #001858;
  }
 
 
@@ -434,8 +427,12 @@ nav a {
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #fef6e4 !important;
+  
 
+ }
+
+ .search-box{
+   color: #fef6e4 ;
  }
 
  .weather-display{
@@ -463,6 +460,10 @@ nav a {
    color: #fef6e4;
  }
 
+ .logo-img{
+   margin-top: 2rem;
+ }
+
  /* The Image container */
  .img-hover-zoom {
    height: 300px;
@@ -479,7 +480,51 @@ nav a {
 
  /* The Transformation */
  .img-hover-zoom--quick-zoom:hover img {
-   transform: scale(2);
+   transform: scale(1.5);
  }
 
- 
+ .ais-ClearRefinements {
+   margin: 1em 0;
+ }
+
+ .ais-SearchBox {
+   margin: 1em 0;
+ }
+
+ .ais-Pagination {
+   margin-top: 1em;
+ }
+
+ .left-panel {
+   float: left;
+   width: 250px;
+ }
+
+ .right-panel {
+   margin-left: 260px;
+ }
+
+ .ais-InstantSearch {
+   max-width: 960px;
+   overflow: hidden;
+   margin: 0 auto;
+ }
+
+ .ais-Hits-item {
+   margin-bottom: 1em;
+   width: calc(50% - 1rem);
+ }
+
+ .ais-Hits-item img {
+   margin-right: 1em;
+ }
+
+ .hit-name {
+   margin-bottom: 0.5em;
+ }
+
+ .hit-description {
+   color: #888;
+   font-size: 14px;
+   margin-bottom: 0.5em;
+ }
