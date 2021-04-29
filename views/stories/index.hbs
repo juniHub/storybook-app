@@ -1,8 +1,21 @@
-<h1>All Stories</h1>
+<h1>All Public Stories</h1>
+
+<form>
+    <div class="input-field">
+        <input id="search" type="search" name="stories" required>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+    </div>
+</form>
+
+
+
+
+
 <div class="row">
     {{#each stories}}
     <div class="col s12 m4">
-        <div class="card index-stories">
+        <div class="card">
             <div class="card-image">
                 {{{editIcon user ../user _id}}}
             </div>

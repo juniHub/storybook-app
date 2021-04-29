@@ -8,11 +8,9 @@ html, body {
 
   color: #fffffe;
   background: #232946;
-  font-family: 'Baloo Thambi 2',
-  cursive;
+  font-family: 'Baloo Thambi 2', cursive;
   scroll-behavior: smooth;
 
-  
 }
 
 .card {
@@ -29,6 +27,47 @@ html, body {
 
 
 }
+
+.card-action {
+  height: 100%;
+}
+
+.show-card {
+  background: white;
+  
+}
+
+.card-action-show-page {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 2rem auto;
+  padding-bottom: 2rem !important;
+
+
+}
+
+.card-action-dashboard {
+
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+
+.card-content-login{
+  height: 160px;
+}
+
+.moreBox{
+  display: none;
+}
+
 
 .login-container {
  
@@ -75,25 +114,9 @@ html, body {
   
 }
 
-.home-stories {
-
-  height: 300px;
-
-}
-
-.index-stories {
-
-  height: 400px;
-
-
-}
-
-.home-stories-body{
-  height: 200px;
-}
 
 .index-stories-body {
-  height: 300px;
+  height: 250px;
 }
 
 p {
@@ -216,10 +239,6 @@ nav a {
    align-items: center;
 }
 
-
-.card-action{
-  height: 100px !important;
-}
 
 
 .materialert {
@@ -344,45 +363,21 @@ nav a {
    text-transform: uppercase;
  }
 
-.show-card{
-  background: white;
-  ;
-}
-
- .card-action-show-page{
-   display: flex;
-   flex-direction: column;
-  
-   justify-content: center;
-   align-items: center;
- 
-   margin: 2rem auto;
-   padding-bottom: 2rem !important;
- 
-  
-   height: 100% !important;
-
- }
-
- .card-action-dashboard {
-  
- 
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
- }
-
  .fas.fa-edit {
    color: #f582ae !important;
  
  }
 
+  .custom-btn {
+    background: #f582ae;
+    color: #001858;
+  }
 
- .delete-btn {
-   background: #f582ae;
-   color: #001858;
- }
+  .loadMore{
+    margin: 2rem auto 3rem auto;
+    display: block;
+    text-align: center;
+  }
 
 
  .social-btn {
@@ -466,7 +461,7 @@ nav a {
 
  /* The Image container */
  .img-hover-zoom {
-   height: 300px;
+ 
    /* Modify this according to your need */
    overflow: hidden;
    /* Removing this will break the effects */
@@ -483,6 +478,8 @@ nav a {
    transform: scale(1.5);
  }
 
+ 
+
  .ais-ClearRefinements {
    margin: 1em 0;
  }
@@ -490,6 +487,7 @@ nav a {
  .ais-SearchBox {
    margin: 1em 0;
  }
+ 
 
  .ais-Pagination {
    margin-top: 1em;
@@ -508,6 +506,7 @@ nav a {
    max-width: 960px;
    overflow: hidden;
    margin: 0 auto;
+   background: white !important;
  }
 
  .ais-Hits-item {
@@ -519,11 +518,11 @@ nav a {
    margin-right: 1em;
  }
 
- .hit-name {
+ .hit-title {
    margin-bottom: 0.5em;
  }
 
- .hit-description {
+ .hit-body {
    color: #888;
    font-size: 14px;
    margin-bottom: 0.5em;

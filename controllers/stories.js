@@ -44,7 +44,7 @@ module.exports.createStory = async (req, res, next) => {
     
     if ( req.body.body === "" || req.body.body === "undefined")
     {
-        req.flash( 'error', 'title and body content is required!' );
+        req.flash( 'error', 'title, tags and body content is required!' );
         return res.redirect( 'stories/add' );
        
     }

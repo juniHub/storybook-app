@@ -50,22 +50,22 @@ StorySchema.plugin(mongooseAlgolia, {
   appId: process.env.ALGOLIA_APP_ID,
   apiKey: process.env.ALGOLIA_API_KEY,
   indexName: 'juni-storybook', //The name of the index in Algolia, you can also pass in a function
-  selector: '-user', //You can decide which field that are getting synced to Algolia (same as selector in mongoose)
+  selector: '-id', //You can decide which field that are getting synced to Algolia (same as selector in mongoose)
   populate: {
     path: 'comments',
-    select: 'user',
+    select: 'title',
   },
   defaults: {
-    user: 'unknown',
+    title: 'unknown',
   },
   mappings: {
     title: function(value) {
-      return `Post: ${value}`
+      return value
     },
   },
   virtuals: {
     whatever: function(doc) {
-      return `Custom data ${doc.title}`
+      return doc.title
     },
   },
   filter: function(doc) {
@@ -78,7 +78,7 @@ let StoryModel = mongoose.model( 'Story', StorySchema );
 
 StoryModel.SyncToAlgolia() //Clears the Algolia index for this schema and synchronizes all documents to Algolia (based on the settings defined in your plugin settings)
 StoryModel.SetAlgoliaSettings({
-  searchableAttributes: ['name', 'properties', 'shows'], //Sets the settings for this schema, see [Algolia's Index settings parameters](https://www.algolia.com/doc/api-client/javascript/settings#set-settings) for more info.
+  searchableAttributes: ['title', 'tags', 'body'], //Sets the settings for this schema, see [Algolia's Index settings parameters](https://www.algolia.com/doc/api-client/javascript/settings#set-settings) for more info.
 })
 
 //module.exports = mongoose.model('Story', StorySchema);

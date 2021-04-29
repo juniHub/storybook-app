@@ -31,14 +31,13 @@
                         href="/stories/{{_id}}"><strong>{{title}}</strong></a><i
                         class="material-icons right">more_vert</i></span>
 
-
                 </span>
 
-                <p>{{formatDate createdAt "MMMM Do YYYY, h:mm:ss a"}}</p>
+                <span class="chip">#{{tags}}</span>
+
+                <p>{{formatDate createdAt "MMMM Do YYYY"}}</p>
                 <br>
-                <span class="chip">{{status}}
-
-                </span>
+                <span class="chip custom-btn">{{status}}</span>
             </div>
 
 
@@ -50,7 +49,7 @@
 
                 <form action="/stories/{{_id}}" method="POST" id="delete-form">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="delete-btn btn-float btn">
+                    <button type="submit" class="custom-btn btn-float btn">
                         <i class="fas fa-trash"></i>
                     </button>
                 </form>
