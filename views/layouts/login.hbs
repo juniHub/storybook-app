@@ -15,6 +15,11 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Algolia Search -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
+
+
 
     <link rel="stylesheet" href="/css/style.css">
 
@@ -74,6 +79,49 @@
 
     </script>
 
+
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3.32.0/algoliasearchLite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.19.0"></script>
+
+    <script>
+
+
+        const search = instantsearch( {
+            indexName: "juni-storybook", searchClient:
+                algoliasearch( "2UZGCMHPPF", "c4264e347958a0b318db93771fe73c0f" )
+        } );
+
+        search.addWidgets( [
+            instantsearch.widgets.searchBox( { container: "#searchbox" } ),
+            instantsearch.widgets.clearRefinements( {
+                container: "#clear-refinements"
+            } ),
+            instantsearch.widgets.refinementList( {
+                container: "#brand-list",
+                attribute: "tags"
+            } ),
+            instantsearch.widgets.hits( {
+                container: "#hits",
+                templates: {
+                    item:
+                        ` 
+                    <article>
+                    <h1>{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h1>
+                    <p>{{#helpers.highlight}}{ "attribute": "body" }{{/helpers.highlight}}</p>
+                    </article>
+           
+                        `
+                }
+            } ),
+            instantsearch.widgets.pagination( {
+                container: "#pagination"
+            } )
+        ] );
+
+        search.start();
+
+
+    </script>
 
 
 </body>

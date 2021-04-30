@@ -69,7 +69,6 @@
 
     <script src='/validateForms.js'></script>
 
-
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"
         nonce="KH5kPpL1"></script>
 
@@ -78,14 +77,41 @@
         nonce="G7lHqFdJ"></script>
 
 
+
+
     <script>
 
         $( document ).ready( function ()
         {
             $( '.tooltipped' ).tooltip();
+
+        } );
+
+
+    </script>
+
+    <script>
+
+        $( document ).ready( function ()
+        {
+            var scrollToTopBtn = document.getElementById( "scrollToTopBtn" )
+            var rootElement = document.documentElement
+
+            function scrollToTop()
+            {
+                // Scroll to top logic
+                rootElement.scrollTo( {
+                    top: 0,
+                    behavior: "smooth"
+                } )
+            }
+            scrollToTopBtn.addEventListener( "click", scrollToTop )
+
         } );
 
     </script>
+
+
 
 
 </body>

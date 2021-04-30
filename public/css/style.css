@@ -479,6 +479,27 @@ nav a {
  }
 
  
+ #scrollToTopBtn {
+  
+   background-color: teal;
+   border: none;
+   border-radius: 50%;
+   color: #fef6e4;
+   cursor: pointer;
+   font-size: 30px;
+   line-height: 48px;
+   width: 48px
+   
+  
+ }
+
+
+ footer {
+   display: flex;
+   justify-content: flex-end;
+   padding: 16px
+ }
+ 
 
  .ais-ClearRefinements {
    margin: 1em 0;

@@ -22,8 +22,6 @@ module.exports = {
     return he.decode(stripedHtml);
   },
 
-  
-
   editIcon: function (storyUser, loggedUser, storyId, floating = true) {
     if (storyUser._id.toString() == loggedUser._id.toString()) {
       if (floating) {
@@ -47,6 +45,8 @@ module.exports = {
         ' selected="selected"$&'
       );
   },
+
+  
 
   condition: function ( v1, operator, v2, options )
   {

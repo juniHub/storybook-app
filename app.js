@@ -11,6 +11,7 @@ const session = require( 'express-session' );
 const flash = require( 'connect-flash' );
 const MongoStore = require( 'connect-mongo' )( session );
 
+
 const connectDB = require('./config/db');
 
 //load config
@@ -117,10 +118,13 @@ app.use( (req, res, next) => {
 
 //Routes
 
+
 app.use( '/', require( './routes/index' ) );
 
 app.use('/auth', require('./routes/auth'));
 app.use( '/stories', require( './routes/stories' ) );
+
+
 
 
 const port = process.env.PORT || 3000;
