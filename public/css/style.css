@@ -501,50 +501,38 @@ nav a {
  }
  
 
- .ais-ClearRefinements {
-   margin: 1em 0;
+ #search-box {
+   margin: 1em 1em 3em;
+   width: calc(100% - 2em);
+   padding: 1em;
+   border: 1px solid #ccc;
+   border-radius: 2px;
+   box-sizing: border-box;
  }
 
- .ais-SearchBox {
-   margin: 1em 0;
- }
+
+
+
+ #facet-list li {
+   margin: 2rem;
+   list-style: none !important;
+   border-bottom: 1px solid teal;
+   }
+   
+  
+
+
  
-
- .ais-Pagination {
-   margin-top: 1em;
+ #container li {
+   padding: 2rem;
+   font-size: medium;
+   list-style: none !important;
+   background: #fef6e4;
+   color: #001858;
+   
  }
 
- .left-panel {
-   float: left;
-   width: 250px;
- }
-
- .right-panel {
-   margin-left: 260px;
- }
-
- .ais-InstantSearch {
-   max-width: 960px;
-   overflow: hidden;
-   margin: 0 auto;
-   background: white !important;
- }
-
- .ais-Hits-item {
-   margin-bottom: 1em;
-   width: calc(50% - 1rem);
- }
-
- .ais-Hits-item img {
-   margin-right: 1em;
- }
-
- .hit-title {
-   margin-bottom: 0.5em;
- }
-
- .hit-body {
-   color: #888;
-   font-size: 14px;
-   margin-bottom: 0.5em;
+ #container em {
+   background: #f582ae;
+   color: #001858;
  }
