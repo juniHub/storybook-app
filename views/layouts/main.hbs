@@ -40,6 +40,8 @@
 
     <script src="https://cdn.ckeditor.com/4.16.0/full/ckeditor.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2"></script>
+
     <script>
         M.Sidenav.init( document.querySelector( '.sidenav' ) )
         M.FormSelect.init( document.querySelector( '#status' ) )
@@ -108,6 +110,97 @@
         } );
 
     </script>
+
+    <script>
+
+        $( document ).ready( function ()
+        {
+
+
+            var applicationID = '2UZGCMHPPF';
+            var apiKey = 'c4264e347958a0b318db93771fe73c0f';
+            var index = 'juni-storybook';
+
+            var client = algoliasearch( applicationID, apiKey );
+            var helper = algoliasearchHelper( client, index, {
+                facets: [ 'tags' ]
+            } );
+
+            helper.on( 'result', function ( content )
+            {
+                renderFacetList( content ); // not implemented yet
+                renderHits( content );
+            } );
+
+            function renderHits( content )
+            {
+
+                let hrefLink = "";
+
+                $( '#container' ).html( function ()
+                {
+                    return $.map( content.hits, function ( hit )
+                    {
+
+                        var list = $( '<a class="title-link" target="_blank" rel="noopener noreferrer">' )
+                            .html( hit._highlightResult.title.value )
+                            .attr( 'href', "/stories/" + hit._highlightResult.id.value )
+
+
+                        return $( '<button class="btn">' ).append( list );
+
+
+
+
+                    } );
+
+
+                } );
+
+
+
+            }
+
+            $( '#facet-list' ).on( 'click', 'input[type=checkbox]', function ( e )
+            {
+                var facetValue = $( this ).data( 'facet' );
+                helper.toggleRefinement( 'tags', facetValue )
+                    .search();
+            } );
+
+            function renderFacetList( content )
+            {
+                $( '#facet-list' ).html( function ()
+                {
+                    return $.map( content.getFacetValues( 'tags' ), function ( facet )
+                    {
+                        var checkbox = $( '<input type=checkbox>' )
+                            .data( 'facet', facet.name )
+                            .attr( 'id', 'fl-' + facet.name );
+                        if ( facet.isRefined ) checkbox.attr( 'checked', 'checked' );
+
+                        var label = $( '<label>' ).html( facet.name + ' (' + facet.count + ')' ).attr( 'for', 'fl-' + facet.name );
+
+
+                        return $( '<li>' ).append( checkbox ).append( label );
+                    } );
+                } );
+            }
+
+            $( '#search-box' ).on( 'keyup', function ()
+            {
+                helper.setQuery( $( this ).val() )
+                    .search();
+            } );
+
+            helper.search();
+
+
+        } );
+
+
+    </script>
+
 
 
 

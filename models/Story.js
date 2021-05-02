@@ -52,7 +52,7 @@ StorySchema.plugin(mongooseAlgolia, {
   indexName: 'juni-storybook', //The name of the index in Algolia, you can also pass in a function
   selector: '-objectID', //You can decide which field that are getting synced to Algolia (same as selector in mongoose)
   populate: {
-    path: 'search-story',
+    path: 'user',
     select: 'title',
   },
   defaults: {
@@ -68,13 +68,18 @@ StorySchema.plugin(mongooseAlgolia, {
       return doc.title
     },
   },
+
   filter: function(doc) {
-    return !doc.softdelete
+    return !doc.softdelete;
   },
+
+
   debug: true, // Default: false -> If true operations are logged out in your console
 } )
 
 let StoryModel = mongoose.model( 'Story', StorySchema );
+
+StoryModel.aggregate( [ { $sort: { createdAt: -1 } } ] );
 
 StoryModel.SyncToAlgolia() //Clears the Algolia index for this schema and synchronizes all documents to Algolia (based on the settings defined in your plugin settings)
 StoryModel.SetAlgoliaSettings({

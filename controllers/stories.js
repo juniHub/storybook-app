@@ -65,13 +65,14 @@ module.exports.createStory = async (req, res, next) => {
       }
     
 
+    await story.save();
+        
 
-      await story.save();
       console.log(story)
 
                       
           req.flash( 'success', 'You have a new post!' );
-          res.redirect( '/dashboard' );
+          res.redirect( '/dashboard');
 
     
                 

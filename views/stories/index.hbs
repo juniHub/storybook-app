@@ -1,16 +1,44 @@
-<h1>All Public Stories</h1>
+<h1>All Latest Public Stories</h1>
 
-<form>
-    <div class="input-field">
-        <input id="search" type="search" name="stories" required>
-        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-        <i class="material-icons">close</i>
+
+<div id="search-stories">
+
+    <div class="row">
+
+
+        <form class="search-form">
+            <div class="input-field">
+                <input id="search-box" type="search" name="stories" placeholder="search for title here" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons close-icon">close</i>
+            </div>
+        </form>
+
+        <div class="col s12 m3">
+
+            <h3>#Tags</h3>
+
+            <ul id=facet-list></ul>
+
+        </div>
+
+        <div class="col s12 m9">
+
+
+
+            <div id=container>
+
+
+            </div>
+
+
+
+
+        </div>
+
     </div>
-</form>
 
-
-
-
+</div>
 
 <div class="row">
     {{#each stories}}
@@ -21,6 +49,7 @@
             </div>
             <div class="card-content center-align index-stories-body">
                 <h5>{{title}}</h5>
+                <span class="chip custom-btn">#{{tags}}</span>
                 <p>{{stripTags (truncate body 150)}}</p>
                 <br>
                 <div class="chip">
@@ -37,6 +66,11 @@
     <p>No stories to display</p>
     {{/each}}
 </div>
+
+
+
+
+
 <footer>
     <button id="scrollToTopBtn"><i class="material-icons">arrow_drop_up</i></button>
 </footer>

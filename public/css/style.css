@@ -116,7 +116,7 @@ html, body {
 
 
 .index-stories-body {
-  height: 250px;
+  height: 260px;
 }
 
 p {
@@ -500,36 +500,71 @@ nav a {
    padding: 16px
  }
  
+ .label-icon{
+   margin-top: 1.5rem;
+   margin-left: 0.5rem;
 
- #search-box {
-   margin: 1em 1em 3em;
-   width: calc(100% - 2em);
-   padding: 1em;
-   border: 1px solid #ccc;
-   border-radius: 2px;
-   box-sizing: border-box;
  }
 
+  .close-icon {
+    margin-top: 1.5rem;
+    margin-right: 0.5rem;
+
+  }
+
+ #search-box {
+ 
+   width: 100%;
+   padding: 2rem 2rem 2rem 4rem;
+   
+   border: 3px solid teal;
+   border-radius: 35px;
+   box-sizing: border-box;
+ }
 
 
 
  #facet-list li {
    margin: 2rem;
    list-style: none !important;
-   border-bottom: 1px solid teal;
-   }
+   border: 1px solid #fef6e4;
+   border-radius: 35px;
+   text-align: center;
    
   
+   }
 
+   #facet-list label{
+     cursor: pointer ;
+
+   }
 
  
- #container li {
+
+  
+ 
+ #container {
+
+  
    padding: 2rem;
    font-size: medium;
-   list-style: none !important;
-   background: #fef6e4;
-   color: #001858;
-   
+   margin-top: 1rem;
+    
+ }
+
+ #container button {
+
+
+   margin: 1rem;
+   color: #fef6e4;
+ 
+
+
+ }
+
+ #container a{
+   color: #fef6e4;
+   text-decoration: none;
  }
 
  #container em {
