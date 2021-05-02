@@ -10,8 +10,10 @@ html, body {
   background: #232946;
   font-family: 'Baloo Thambi 2', cursive;
   scroll-behavior: smooth;
+  
 
 }
+
 
 .card {
 
@@ -23,9 +25,7 @@ html, body {
   -webkit-box-shadow: 0 10px 6px -6px gray;
   -moz-box-shadow: 0 10px 6px -6px gray;
   box-shadow: 0 10px 6px -6px gray;
-  
-
-
+    
 }
 
 .card-action {
@@ -71,7 +71,6 @@ html, body {
 
 .login-container {
  
-
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
@@ -147,8 +146,6 @@ th
   color: #f582ae !important;
 }
 
-
-
 .lead{
   color: #8bd3dd !important;
 }
@@ -169,8 +166,6 @@ strong:hover {
 nav a {
   color: #fef6e4 !important;
 }
-
-
 
 .sidenav{
   background: teal !important;
@@ -207,7 +202,6 @@ nav a {
   margin: 0;
 }
 
-
 .brand-logo{
   font-size: 1.5rem !important;
 }
@@ -228,7 +222,6 @@ nav a {
   text-align: center;
   align-items: center;
   
- 
 }
 
 .footer-section{
@@ -239,9 +232,8 @@ nav a {
    align-items: center;
 }
 
-
-
 .materialert {
+
   position: relative;
   min-width: 150px;
   padding: 15px;
@@ -252,11 +244,13 @@ nav a {
   transition: all 0.1s linear;
   display: flex;
   align-items: center;
+
 }
 .materialert .material-icons {
   margin-right: 10px;
 }
 .materialert .close-alert {
+
   -webkit-appearance: none;
   border: 0;
   cursor: pointer;
@@ -271,50 +265,63 @@ nav a {
   position: absolute;
   top: 16px;
   right: 5px;
+
 }
 .materialert.info {
+
   background-color: #5c6bc0;
   color: #fff;
+
 }
 .materialert.success {
+
   background-color: #8bd3dd;
   color: #232946;
+
 }
 .materialert.error {
+
   background-color: #c62828;
   color: #fff;
+
 }
 .materialert.danger {
+
   background-color: #c62828;
   color: #fff;
+
 }
 .materialert.warning {
+
   background-color: #fbc02d;
   color: #232946;
+
 }
 
 .highlighted {
+
   font-size: 20px;
   
 }
 
  .input-field input[type=text] {
+
    color: white;
    margin-top: 1rem !important;
+
  }
  
-
-
  ul li {
+
    list-style-type: square !important;
    margin-left: 2rem;
+
  }
 
  table,
  th,
  td {
    border: 1px solid #232946 !important;
-  
    border-collapse: collapse;
  }
 
@@ -340,8 +347,6 @@ nav a {
   
 
  }
-
-
 
  .post-body p {
    word-break: break-all;
@@ -373,12 +378,29 @@ nav a {
     color: #001858;
   }
 
+  .dashboard-btn {
+
+     background: #f582ae;
+     margin: 4rem auto;
+     padding: 1rem;
+     border-radius: 35px;
+     
+  }
+
+  .dashboard-btn a{
+    color: #fef6e4;
+    
+  }
+
+  
+ 
+
+
   .loadMore{
     margin: 2rem auto 3rem auto;
     display: block;
     text-align: center;
   }
-
 
  .social-btn {
     margin-top: 1rem;
@@ -422,8 +444,7 @@ nav a {
   text-align: center;
   align-items: center;
   justify-content: center;
-  
-
+ 
  }
 
  .search-box{
@@ -526,6 +547,7 @@ nav a {
 
  #facet-list li {
    margin: 2rem;
+   padding: 0.5rem;
    list-style: none !important;
    border: 1px solid #fef6e4;
    border-radius: 35px;

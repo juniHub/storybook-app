@@ -70,7 +70,7 @@ StorySchema.plugin(mongooseAlgolia, {
   },
 
   filter: function(doc) {
-    return !doc.softdelete;
+    return doc.status === "public"
   },
 
 
