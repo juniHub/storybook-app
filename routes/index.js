@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { ensureAuth, ensureGuest } = require( "../middleware/auth" );
 
+
 //request quote API
 const request = require("request");
 
@@ -27,42 +28,6 @@ const today = new Date();
 convertToF= (celsius) => {
   return celsius * 9/5 + 32
 }
-
- const initialize = () => {
-        navigator.geolocation.getCurrentPosition(
-          getWeatherInfoByLocation,
-          handleError
-        );
-      };
-
-      const handleError = error => {
-        alert(`Unable to retrieve location: ${error.message}`);
-      };
-
-      const getWeatherInfoByLocation = position => {
-        const xhr = new XMLHttpRequest();
-        const lat = position.coords.latitude;
-        const long = position.coords.longitude;
-        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${ apiKey }`;
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4) {
-            showTemperature(JSON.parse(xhr.response));
-          }
-        };
-
-        xhr.open("get", url, true);
-        xhr.send();
-      };
-
-      const showTemperature = weatherInfo => {
-        const location = weatherInfo.name;
-        const temperature = Math.round(
-          ((weatherInfo.main.temp - 273.15) * 9) / 5 + 32
-        );
-        document.getElementById(
-          "weatherInfo"
-        ).innerHTML = `Current temperature in ${location} is ${temperature}°Fahrenheit `;
-      };
 
 
 // @desc    Login/Landing page
@@ -116,7 +81,7 @@ router.get("/dashboard", ensureAuth, async (req, res) => {
 
 router.post( '/',  ensureGuest, async ( req, res ) =>
 {
-  const city = req.body.cityName;
+  const city = req.body.cityName || geoCity;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${ city }&units=metric&appid=${ apiKey }`;
    const stories = await Story.find({ status: 'public' })
       .sort({ createdAt: 'desc' })

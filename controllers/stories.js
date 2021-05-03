@@ -24,6 +24,21 @@ module.exports.index = async (req, res) => {
   }
 }
 
+module.exports.dashboardStory = async (req, res) => {
+  try {
+    const stories = await Story.find({ status: 'public' })
+      .sort({ createdAt: -1 })
+      .lean();
+
+    res.render('stories/dashboardStory', {
+      stories,
+    });
+  } catch (err) {
+    console.error(err);
+    res.render('error/500');
+  }
+}
+
 
 // @desc    Show add page
 // @route   GET /stories/add
@@ -40,6 +55,8 @@ module.exports.createStory = async (req, res, next) => {
 
   try
   {
+    
+
     const story = new Story( req.body );
     
     if ( req.body.body === "" || req.body.body === "undefined")
@@ -68,7 +85,9 @@ module.exports.createStory = async (req, res, next) => {
     await story.save();
         
 
-      console.log(story)
+    console.log( story )
+    
+    
 
                       
           req.flash( 'success', 'You have a new post!' );

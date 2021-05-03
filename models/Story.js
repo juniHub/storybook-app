@@ -79,7 +79,7 @@ StorySchema.plugin(mongooseAlgolia, {
 
 let StoryModel = mongoose.model( 'Story', StorySchema );
 
-StoryModel.aggregate( [ { $sort: { createdAt: -1 } } ] );
+//StoryModel.aggregate( [ { $sort: { createdAt: -1 } } ] );
 
 StoryModel.SyncToAlgolia() //Clears the Algolia index for this schema and synchronizes all documents to Algolia (based on the settings defined in your plugin settings)
 StoryModel.SetAlgoliaSettings({

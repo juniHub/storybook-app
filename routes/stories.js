@@ -12,7 +12,11 @@ router.get('/add', ensureAuth, stories.renderNewForm)
 
 router.route( '/' )
     .get(ensureAuth, catchAsync(stories.index))
-    .post(ensureAuth, upload.single('image'), catchAsync(stories.createStory))
+    .post( ensureAuth, upload.single( 'image' ), catchAsync( stories.createStory ) )
+   
+
+router.route( '/dashboardStory' )
+     .get(ensureAuth, catchAsync(stories.dashboardStory))
 
 
 router.route('/:id')

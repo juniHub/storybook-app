@@ -17,25 +17,19 @@
             </div>
         </form>
 
-        <div class="col s12 m3">
+        <div class="row">
 
             <h3>#Tags</h3>
 
-            <ul id=facet-list></ul>
+            <div id=facet-list></div>
 
         </div>
 
-        <div class="col s12 m9">
+        <div class="row">
 
+            <h3>⭐Titles</h3>
 
-
-            <div id=container>
-
-
-            </div>
-
-
-
+            <div id=container></div>
 
         </div>
 
@@ -43,32 +37,6 @@
 
 </div>
 
-<div class="row">
-    {{#each stories}}
-    <div class="col s12 m4">
-        <div class="card">
-            <div class="card-image">
-                {{{editIcon user ../user _id}}}
-            </div>
-            <div class="card-content center-align index-stories-body">
-                <h5>{{title}}</h5>
-                <span class="chip custom-btn">#{{tags}}</span>
-                <p>{{stripTags (truncate body 150)}}</p>
-                <br>
-                <div class="chip">
-                    <img src="{{user.image}}" alt="user-image">
-                    <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
-                </div>
-            </div>
-            <div class="card-action center-align">
-                <a href="/stories/{{_id}}" class="btn">Read More</a>
-            </div>
-        </div>
-    </div>
-    {{else}}
-    <p>No stories to display</p>
-    {{/each}}
-</div>
 
 
 

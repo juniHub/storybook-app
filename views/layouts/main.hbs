@@ -135,19 +135,22 @@
             function renderHits( content )
             {
 
-                let hrefLink = "";
+
 
                 $( '#container' ).html( function ()
                 {
                     return $.map( content.hits, function ( hit )
                     {
 
-                        var list = $( '<a class="title-link" target="_blank" rel="noopener noreferrer">' )
+                        var list = $( '<a class="collection-item" target="_blank" rel="noopener noreferrer">' )
                             .html( hit._highlightResult.title.value )
-                            .attr( 'href', "/stories/" + hit._highlightResult.id.value )
+                            .attr( 'href', "/stories/" + hit._highlightResult.id.value );
+
+                        var noList = $( '<p class="noList">' ).html( "Sorry, no result found, try another one!" )
 
 
-                        return $( '<button class="btn">' ).append( list );
+                        if ( hit._highlightResult.title.value !== undefined ) return $( '<div class="collection">' ).append( list );
+                        else return $( '<div class="collection">' ).append( noList );
 
 
                     } );
@@ -177,10 +180,10 @@
                             .attr( 'id', 'fl-' + facet.name );
                         if ( facet.isRefined ) checkbox.attr( 'checked', 'checked' );
 
-                        var label = $( '<label>' ).html( facet.name + ' (' + facet.count + ')' ).attr( 'for', 'fl-' + facet.name );
+                        var label = $( '<label>' ).html( "#" + facet.name + ' (' + facet.count + ')' ).attr( 'for', 'fl-' + facet.name );
 
 
-                        return $( '<li>' ).append( checkbox ).append( label );
+                        return $( '<a>' ).append( checkbox ).append( label );
                     } );
                 } );
             }

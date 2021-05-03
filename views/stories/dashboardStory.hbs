@@ -1,0 +1,87 @@
+<div id="dashboard-stories">
+    <button class="dashboard-btn"><a href="/stories">Visit All Public Stories Here</a></button>
+</div>
+
+<h3>Welcome {{name}} 😊</h3>
+<h5>All your stories shown here or create new one ❤️</h5>
+
+{{#condition success.length ">" 0}}
+
+<div class="materialert success">
+    <div class="material-icons"><i class="fa fa-check"></i></div>
+    <span>{{success}}</span>
+    <button type="button" class="close-alert">×</button>
+</div>
+
+{{/condition}}
+
+
+{{#if stories}}
+<div class="row">
+    {{#each stories}}
+    <div class="col s12 m3">
+        <div class="card sticky-action">
+
+            <div class="card-image img-hover-zoom img-hover-zoom--quick-zoom">
+                <a class="highlighted" href="/stories/{{_id}}">
+                    <img class="dashboard-img" src="{{image}}" alt="story-image">
+                </a>
+
+            </div>
+
+
+
+            <div class="card-content center-align">
+                <span class="card-title activator grey-text text-darken-4"><a class="highlighted"
+                        href="/stories/{{_id}}"><strong>{{title}}</strong></a><i
+                        class="material-icons right">more_vert</i></span>
+
+                </span>
+
+                <span class="chip">#{{tags}}</span>
+
+                <p>{{formatDate createdAt "MMMM Do YYYY"}}</p>
+                <br>
+                <span class="chip custom-btn">{{status}}</span>
+            </div>
+
+
+            <div class="card-action card-action-dashboard">
+
+                <a href="/stories/edit/{{_id}}" class="btn-float btn dark-blue">
+                    <i class="fas fa-edit "></i>
+                </a>
+
+                <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="custom-btn btn-float btn">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </form>
+
+
+            </div>
+
+
+            <div class="card-reveal post-body">
+                <span class="card-title grey-text text-darken-4"><a class="highlighted"
+                        href="/stories/{{_id}}"><strong>{{title}}</strong></a>
+                    <i class="material-icons right">close</i>
+
+                </span>
+                <p>{{stripTags (truncate body 150)}} </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<p>You have not created any stories</p>
+{{/if}}
+
+<footer>
+    <button id="scrollToTopBtn"><i class="material-icons">arrow_drop_up</i></button>
+</footer>

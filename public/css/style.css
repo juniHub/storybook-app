@@ -392,6 +392,13 @@ nav a {
     
   }
 
+  .logout-btn{
+    
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    
+   
+  }
   
  
 
@@ -545,51 +552,43 @@ nav a {
 
 
 
- #facet-list li {
-   margin: 2rem;
+ #facet-list a {
+   margin: 0.5rem;
    padding: 0.5rem;
-   list-style: none !important;
-   border: 1px solid #fef6e4;
-   border-radius: 35px;
-   text-align: center;
+ 
    
   
    }
 
    #facet-list label{
      cursor: pointer ;
+    
 
    }
 
  
-
-  
- 
  #container {
 
-  
-   padding: 2rem;
-   font-size: medium;
-   margin-top: 1rem;
-    
- }
-
- #container button {
-
-
-   margin: 1rem;
-   color: #fef6e4;
- 
-
-
- }
-
- #container a{
-   color: #fef6e4;
-   text-decoration: none;
+   margin-top: 2rem;
+   
  }
 
  #container em {
    background: #f582ae;
    color: #001858;
+ }
+
+ .collection{
+   margin: 0;
+   border-radius: 0;
+   font-size: 1.5rem;
+  
+ }
+
+ .collection-item {
+   color: teal !important;
+   background: #fef6e4 !important;
+ }
+ .collection-item:hover{
+    background: #8bd3dd !important;
  }
