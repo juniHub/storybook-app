@@ -20,7 +20,7 @@
 
             <div class="input-field">
                 <input type="text" id="title" name="title" class="validate" required>
-                <label class="title-label" for="title">Title</label>
+                <label class="label" for="title">Title</label>
             </div>
 
         </div>
@@ -29,7 +29,7 @@
 
             <div class="input-field">
                 <input type="text" id="tags" name="tags" class="validate" required>
-                <label class="title-label" for="tags">Tags (coma separated)</label>
+                <label class="label" for="tags">Tags (coma separated)</label>
             </div>
 
         </div>
@@ -38,12 +38,17 @@
 
 
         <div class="row">
+
             <div class="input-field">
+
                 <select class="browser-default" id="status" name="status" type="text">
-                    <option value="" disabled selected>Choose your status</option>
+                    <option value="" disabled selected>Select "Public" for Publishing/ Select "Private" for Saving as
+                        Draft or
+                        Personal Story</option>
                     <option value="public" selected>Public</option>
                     <option value="private">Private</option>
                 </select>
+
             </div>
         </div>
 

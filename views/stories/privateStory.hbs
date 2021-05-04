@@ -3,13 +3,13 @@
 </div>
 
 <h3>Welcome {{name}} 😊</h3>
-<h5>Manage Your Public Stories Here ❤️</h5>
+<h5>Manage Your Private Stories Here ❤️</h5>
 
 
 {{#if stories}}
 <div class="row">
     {{#each stories}}
-    {{#condition status "==" "public"}}
+    {{#condition status "==" "private"}}
     <div class="col s12 m3">
         <div class="card sticky-action">
 

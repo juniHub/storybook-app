@@ -1,9 +1,12 @@
-<div id="dashboard-stories">
+<div id="public-stories">
     <button class="dashboard-btn"><a href="/stories">Visit All Public Stories Here</a></button>
 </div>
 
 <h3>Welcome {{name}} 😊</h3>
-<h5>All your stories shown here or create new one ❤️</h5>
+<h5>Your stories shown here or create new one ❤️</h5>
+<h6>Click on <a href="/stories/add" class="btn-floating btn-large waves-effect waves-light purple lighten-1"><i
+            class="fas fa-plus"></i></a> to create new
+    one!</h6>
 
 {{#condition success.length ">" 0}}
 
@@ -16,72 +19,36 @@
 {{/condition}}
 
 
-{{#if stories}}
-<div class="row">
-    {{#each stories}}
-    <div class="col s12 m3">
-        <div class="card sticky-action">
+<div id="search-stories">
 
-            <div class="card-image img-hover-zoom img-hover-zoom--quick-zoom">
-                <a class="highlighted" href="/stories/{{_id}}">
-                    <img class="dashboard-img" src="{{image}}" alt="story-image">
-                </a>
-
-            </div>
+    <div class="row">
 
 
 
-            <div class="card-content center-align">
-                <span class="card-title activator grey-text text-darken-4"><a class="highlighted"
-                        href="/stories/{{_id}}"><strong>{{title}}</strong></a><i
-                        class="material-icons right">more_vert</i></span>
+        <div class="row">
 
-                </span>
+            <h3>#Filter Tags</h3>
 
-                <span class="chip">#{{tags}}</span>
+            <div id=facet-list></div>
 
-                <p>{{formatDate createdAt "MMMM Do YYYY"}}</p>
-                <br>
-                <span class="chip custom-btn">{{status}}</span>
-            </div>
+        </div>
 
+        <div class="row">
 
-            <div class="card-action card-action-dashboard">
+            <h3>⭐All Your Public Stories</h3>
 
-                <a href="/stories/edit/{{_id}}" class="btn-float btn dark-blue">
-                    <i class="fas fa-edit "></i>
-                </a>
-
-                <form action="/stories/{{_id}}" method="POST" id="delete-form">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="custom-btn btn-float btn">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </form>
-
-
-            </div>
-
-
-            <div class="card-reveal post-body">
-                <span class="card-title grey-text text-darken-4"><a class="highlighted"
-                        href="/stories/{{_id}}"><strong>{{title}}</strong></a>
-                    <i class="material-icons right">close</i>
-
-                </span>
-                <p>{{stripTags (truncate body 150)}} </p>
-
-            </div>
+            <ul id=container>
+            </ul>
 
         </div>
 
     </div>
-    {{/each}}
-</div>
-{{else}}
-<p>You have not created any stories</p>
-{{/if}}
 
-<footer>
-    <button id="scrollToTopBtn"><i class="material-icons">arrow_drop_up</i></button>
-</footer>
+</div>
+
+<div id="dashboard-stories">
+    <button class="dashboard-btn"><a href="/stories/dashboardStory">Manage Your Public Stories</a></button>
+
+    <button class="dashboard-btn"><a href="/stories/privateStory">Manage Your Private Stories</a></button>
+
+</div>

@@ -139,21 +139,33 @@
 
                 $( '#container' ).html( function ()
                 {
-                    return $.map( content.hits, function ( hit )
+
+                    var noList = $( '<p class="noList">' ).html( "Sorry, no result found. Try another one!" );
+
+                    if ( content.hits.length <= 0 )
+
+                        return $( '<div>' ).append( noList );
+
+                    else
                     {
 
-                        var list = $( '<a class="collection-item" target="_blank" rel="noopener noreferrer">' )
-                            .html( hit._highlightResult.title.value )
-                            .attr( 'href', "/stories/" + hit._highlightResult.id.value );
-
-                        var noList = $( '<p class="noList">' ).html( "Sorry, no result found, try another one!" )
 
 
-                        if ( hit._highlightResult.title.value !== undefined ) return $( '<div class="collection">' ).append( list );
-                        else return $( '<div class="collection">' ).append( noList );
+
+                        return $.map( content.hits, function ( hit )
+                        {
+
+                            var list = $( '<a class="collection-item" target="_blank" rel="noopener noreferrer">' )
+                                .html( hit._highlightResult.title.value )
+                                .attr( 'href', "/stories/" + hit._highlightResult.id.value );
 
 
-                    } );
+                            return $( '<li class="collection">' ).append( list );
+
+
+
+                        } );
+                    }
 
 
                 } );
