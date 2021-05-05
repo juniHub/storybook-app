@@ -1,12 +1,11 @@
-<div id="public-stories">
-    <button class="dashboard-btn"><a href="/stories">Visit All Public Stories Here</a></button>
+<div id="dashboard-stories" class="dashboard-stories">
+    <button class="dashboard-btn"><a href="/stories">Visit All Public Stories</a></button>
+    <button class="logout-btn"><a href="/auth/logout">Log Out</a></button>
 </div>
 
 <h3>Welcome {{name}} 😊</h3>
-<h5>Your stories shown here or create new one ❤️</h5>
-<h6>Click on <a href="/stories/add" class="btn-floating btn-large waves-effect waves-light purple lighten-1"><i
-            class="fas fa-plus"></i></a> to create new
-    one!</h6>
+<h5>Your stories shown here or create new one <a href="/stories/add"
+        class="btn-floating btn-large waves-effect waves-light pink lighten-2"><i class="fas fa-plus"></i></a></h5>
 
 {{#condition success.length ">" 0}}
 
@@ -35,7 +34,7 @@
 
         <div class="row">
 
-            <h3>⭐All Your Public Stories</h3>
+            <h3>⭐All Public Stories</h3>
 
             <ul id=container>
             </ul>

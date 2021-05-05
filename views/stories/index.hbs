@@ -1,5 +1,6 @@
-<h1>All Latest Public Stories</h1>
-
+<div id="dashboard-stories">
+    <button class="dashboard-btn"><a href="/dashboard">Back to Dashboard</a></button>
+</div>
 
 <div id="search-stories">
 
@@ -37,7 +38,33 @@
 
 </div>
 
+<div class="row">
+    <h1>All Latest Public Stories</h1>
 
+    {{#each stories}}
+    <div class="col s12 m3">
+        <div class="card">
+            <div class="card-image">
+                {{{editIcon user ../user _id}}}
+            </div>
+            <div class="card-content center-align index-stories-body">
+                <h5>{{title}}</h5>
+                <span class="chip">#{{tags}}</span>
+                <br>
+                <div class="chip">
+                    <img src="{{user.image}}" alt="user-image">
+                    <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                </div>
+            </div>
+            <div class="card-action center-align">
+                <a href="/stories/{{_id}}" class="btn">Read More</a>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <p>No stories to display</p>
+    {{/each}}
+</div>
 
 
 

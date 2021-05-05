@@ -15,8 +15,9 @@ router.route( '/' )
     .post( ensureAuth, upload.single( 'image' ), catchAsync( stories.createStory ) )
    
 
-router.route( '/dashboardStory' )
-     .get(ensureAuth, catchAsync(stories.dashboardStory))
+router.get( '/dashboardStory', ensureAuth, catchAsync(stories.dashboardStory))
+
+router.get( '/privateStory' , ensureAuth, catchAsync(stories.privateStory))
 
 
 router.route('/:id')

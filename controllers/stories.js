@@ -24,13 +24,34 @@ module.exports.index = async (req, res) => {
   }
 }
 
-module.exports.dashboardStory = async (req, res) => {
+module.exports.dashboardStory = async ( req, res ) =>
+{
+  
+  
   try {
-    const stories = await Story.find({ status: 'public' })
+    const stories = await Story.find( { user: req.user.id, status: 'public' } )
+      .sort({ createdAt: -1 })
+      .lean();
+  
+    
+      res.render( 'stories/dashboardStory', {
+        stories,
+      } );
+    
+
+  } catch (err) {
+    console.error(err);
+    res.render('error/500');
+  }
+}
+
+module.exports.privateStory = async (req, res) => {
+  try {
+    const stories = await Story.find({ user: req.user.id, status: 'private' })
       .sort({ createdAt: -1 })
       .lean();
 
-    res.render('stories/dashboardStory', {
+    res.render('stories/privateStory', {
       stories,
     });
   } catch (err) {

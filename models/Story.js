@@ -50,13 +50,13 @@ StorySchema.plugin(mongooseAlgolia, {
   appId: process.env.ALGOLIA_APP_ID,
   apiKey: process.env.ALGOLIA_API_KEY,
   indexName: 'juni-storybook', //The name of the index in Algolia, you can also pass in a function
-  selector: '-objectID', //You can decide which field that are getting synced to Algolia (same as selector in mongoose)
+  selector: '-user', //You can decide which field that are getting synced to Algolia (same as selector in mongoose)
   populate: {
     path: 'user',
-    select: 'title',
+    select: 'user',
   },
   defaults: {
-    title: 'unknown',
+    user: 'unknown',
   },
   mappings: {
     title: function(value) {

@@ -115,7 +115,7 @@ html, body {
 
 
 .index-stories-body {
-  height: 260px;
+  height: 150px;
 }
 
 p {
@@ -212,9 +212,18 @@ nav a {
   color: #8bd3dd !important;
 }
 
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
 .nav-footer a {
 
-  margin: 1.5rem 0.6rem !important;
+  margin: 1rem 0.6rem !important;
  
   font-size: 0.8rem !important;
   display: flex;
@@ -224,12 +233,8 @@ nav a {
   
 }
 
-.footer-section{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
-   align-items: center;
+.juniHub {
+  font-size: 1rem !important;
 }
 
 .materialert {
@@ -343,7 +348,7 @@ nav a {
 
  .dashboard-img{
     
-   height: 200px !important;
+   height: 300px !important;
   
 
  }
@@ -388,17 +393,25 @@ nav a {
   }
 
   .dashboard-btn a{
-    color: #fef6e4;
+    color: #001858;
     
   }
 
-  .logout-btn{
-    
-    margin-bottom: 0.5rem;
-    margin-right: 1rem;
-    
-   
-  }
+  .logout-btn {
+
+      background: #f582ae;
+      margin: 4rem auto;
+      padding: 1rem;
+      border-radius: 35px;
+      float: right;
+
+    }
+
+  .logout-btn a {
+       color: #001858;
+
+     }
+  
   
  
 
