@@ -115,7 +115,7 @@ html, body {
 
 
 .index-stories-body {
-  height: 150px;
+  height: 180px;
 }
 
 p {
@@ -223,7 +223,7 @@ nav a {
 
 .nav-footer a {
 
-  margin: 1rem 0.6rem !important;
+  margin: 0 0.5rem !important;
  
   font-size: 0.8rem !important;
   display: flex;
@@ -383,35 +383,39 @@ nav a {
     color: #001858;
   }
 
+  .dashboard-href{
+     margin: 4rem auto;
+
+  }
   .dashboard-btn {
 
      background: #f582ae;
-     margin: 4rem auto;
+     color: #001858;
      padding: 1rem;
      border-radius: 35px;
      
   }
 
-  .dashboard-btn a{
-    color: #001858;
+  .dashboard-btn:hover{
+    background: #8bd3dd;
     
   }
 
   .logout-btn {
 
       background: #f582ae;
-      margin: 4rem auto;
+      color: #001858;
+     
       padding: 1rem;
       border-radius: 35px;
       float: right;
 
     }
 
-  .logout-btn a {
-       color: #001858;
+    .logout-btn:hover{
+      background: #8bd3dd;
+    }
 
-     }
-  
   
  
 

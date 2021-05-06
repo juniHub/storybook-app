@@ -12,7 +12,7 @@ module.exports = {
       new_str = str.substr(0, len);
       new_str = str.substr(0, new_str.lastIndexOf(' '));
       new_str = new_str.length > 0 ? new_str : str.substr(0, len);
-      return new_str + '...read more';
+      return new_str + '...';
     }
     return str;
   },
@@ -76,19 +76,5 @@ module.exports = {
     }
   },
 
-  statusCondition: function ( v1, operator, v2, options )
-  {
-
-    switch ( operator )
-    {
-      case '==':
-        return ( v1 == v2 ) ? options.fn( this ) : options.inverse( this );
-     
-      case '!=':
-        return ( v1 != v2 ) ? options.fn( this ) : options.inverse( this );
-    
-      default:
-        return options.inverse( this );
-    }
-  }
+ 
 };
