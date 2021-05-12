@@ -125,15 +125,22 @@ router.post( '/',  ensureGuest, async ( req, res ) =>
 
       } else
       {
-        const weatherText = `It's ${ weather.weather[ 0 ].description } in ${ weather.name }!`;
+        const weatherText = `It's ${ weather.weather[ 0 ].description } in ${ weather.name } now!`;
 
         const mainWeather = weather.weather[ 0 ].main;
 
         const temperature = Math.floor(weather.main.temp);
 
         const Fdegrees = convertToF( temperature );
+        
+        const defaultIcon = weather.weather[ 0 ].icon;
 
-        const weatherIcon = `/assets/${mainWeather}.svg`
+        const iconPath = `/assets/${ mainWeather }.svg`
+        const weatherIcon = iconPath 
+        if ( iconPath == null || iconPath == undefined )
+        {
+           weatherIcon = "https://openweathermap.org/img/wn/" + defaultIcon + "@2x.png";
+        }
 
 
         res.render( "login", {

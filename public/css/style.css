@@ -20,7 +20,9 @@ html, body {
   color: #172c66;
   background: #fef6e4;
 
-  max-width: 100%;
+  width: 100%;
+  min-width: 260px !important;
+  
   margin: 2rem auto 2rem auto;
   -webkit-box-shadow: 0 10px 6px -6px gray;
   -moz-box-shadow: 0 10px 6px -6px gray;
@@ -61,7 +63,7 @@ html, body {
 
 
 .card-content-login{
-  height: 160px;
+  height: 200px;
 }
 
 .moreBox{
@@ -78,16 +80,14 @@ html, body {
   align-items: center;
   text-align: center;
 
-  color: #172c66;
-  background: #fef6e4;
+  color: #fef6e4;
+ 
 
   width: 100%;
   height: 100%;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 2rem;
-  -webkit-box-shadow: 0 10px 6px -6px gray;
-  -moz-box-shadow: 0 10px 6px -6px gray;
-  box-shadow: 0 10px 6px -6px gray;
+ 
 
  
 }
@@ -95,6 +95,7 @@ html, body {
 .weather-container {
   width: 100%;
   height: 100%;
+
   margin: 2rem auto;
   padding: 1rem;
   
@@ -378,9 +379,24 @@ nav a {
  
  }
 
+ .login-btn {
+ 
+   min-width: 190px;
+   text-transform: lowercase;
+   
+
+ }
+
+ .weather-btn {
+   background: #f582ae;
+   color: #001858;
+   min-width: 180px;
+ }
+
   .custom-btn {
     background: #f582ae;
     color: #001858;
+    
   }
 
   .dashboard-href{
@@ -455,6 +471,8 @@ nav a {
    border-radius: 10px;
    padding: 2rem;
    background: teal;
+   min-height: 420px;
+   min-width: 200px;
       
     -webkit-box-shadow: 0 10px 6px -6px gray;
     -moz-box-shadow: 0 10px 6px -6px gray;
@@ -468,11 +486,13 @@ nav a {
   text-align: center;
   align-items: center;
   justify-content: center;
+
  
  }
 
  .search-box{
    color: #fef6e4 ;
+   margin-bottom: 2rem !important;
  }
 
  .weather-display{
@@ -490,7 +510,7 @@ nav a {
    color: #fef6e4;
    background: #232946;
    font-size: 1rem;
-   min-width: 200px;
+   width: 100%;
   
 
  }
