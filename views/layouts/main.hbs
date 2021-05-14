@@ -42,6 +42,10 @@
 
     <script src="https://cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"></script>
+
     <script>
         M.Sidenav.init( document.querySelector( '.sidenav' ) )
         M.FormSelect.init( document.querySelector( '#status' ) )
@@ -76,7 +80,7 @@
         src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=226925842370136&autoLogAppEvents=1"
         nonce="G7lHqFdJ"></script>
 
-
+    
 
 
     <script>
@@ -117,6 +121,7 @@
         {
 
 
+
             var applicationID = '2UZGCMHPPF';
             var apiKey = 'c4264e347958a0b318db93771fe73c0f';
             var index = 'juni-storybook';
@@ -155,12 +160,18 @@
                         return $.map( content.hits, function ( hit )
                         {
 
-                            var list = $( '<a class="collection-item" target="_blank" rel="noopener noreferrer">' )
+                           
+                            var href = $('<a target="_blank" rel="noopener noreferrer">')
                                 .html( hit._highlightResult.title.value )
                                 .attr( 'href', "/stories/" + hit._highlightResult.id.value );
+                                
+
+                            var formatDate = moment( new Date( hit._highlightResult.createdAt.value) ).format( "MM/DD/YYYY" )
+
+                            var date = $('<span class="secondary-content">').html( formatDate);
 
 
-                            return $( '<li class="collection">' ).append( list );
+                            return $( '<li class="collection-item">' ).append(href).append(date);
 
 
 

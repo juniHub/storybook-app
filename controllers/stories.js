@@ -79,7 +79,8 @@ module.exports.createStory = async (req, res, next) => {
     
 
     const story = new Story( req.body );
-    
+
+        
     if ( req.body.body === "" || req.body.body === "undefined")
     {
         req.flash( 'error', 'title, tags and body content is required!' );

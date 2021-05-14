@@ -610,22 +610,9 @@ nav a {
    
  }
 
- #container em {
-   background: #f582ae;
-   color: #001858;
- }
+ 
 
- .collection{
-   margin: 0;
-   border-radius: 0;
-   font-size: 1.5rem;
-  
- }
-
- .collection-item {
-   color: teal !important;
-   background: #fef6e4 !important;
- }
  .collection-item:hover{
-    background: #8bd3dd !important;
+    background: #001858;
+ 
  }
