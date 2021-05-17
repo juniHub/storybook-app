@@ -71,7 +71,7 @@ StorySchema.plugin(mongooseAlgolia, {
   },
  
   filter: function(doc) {
-    return doc.status === "public"
+    return doc.status === "public";
   },
 
 
