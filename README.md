@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/juniHub/storybook-app">
+  <a target="_blank" href="https://github.com/juniHub/storybook-app">
     <img src="https://res.cloudinary.com/dafolrlpj/image/upload/v1621254108/gallery/pd5caizxucevio9vmw6z.png" alt="Logo" width="80" height="80">
   </a>
 
