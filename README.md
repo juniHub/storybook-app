@@ -7,16 +7,17 @@
 [![MIT License][license-shield]][license-url]
 
 
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/juniHub/storybook-app.svg?style=for-the-badge
 [contributors-url]: https://github.com/juniHub/storybook-app/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gjuniHub/storybook-app.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/juniHub/storybook-app.svg?style=for-the-badge
 [forks-url]: https://github.com/juniHub/storybook-app/network/members
 [stars-shield]: https://img.shields.io/github/stars/juniHub/storybook-app.svg?style=for-the-badge
 [stars-url]: https://github.com/juniHub/storybook-app/stargazers
 [issues-shield]: https://img.shields.io/github/issues/juniHub/storybook-app.svg?style=for-the-badge
-[issues-url]: https://github.com/juniHub/storybook-app/issues
+[issues-url]: https://github.com/gjuniHub/storybook-app/issues
 [license-shield]: https://img.shields.io/github/license/juniHub/storybook-app.svg?style=for-the-badge
 [license-url]: https://github.com/juniHub/storybook-app/blob/master/LICENSE.txt
 
