@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a target="_blank" href="https://github.com/juniHub/storybook-app">
+  <a href="https://github.com/juniHub/storybook-app">
     <img src="https://res.cloudinary.com/dafolrlpj/image/upload/v1621254108/gallery/pd5caizxucevio9vmw6z.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -13,7 +13,7 @@
     <a href="https://github.com/juniHub/storybook-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://juni-storybook.herokuapp.com/">View Demo</a>
+    <a href="https://juni-storybook.herokuapp.com/" target="_blank">View Demo</a>
     ·
     <a href="https://github.com/juniHub/storybook-app/issues">Report Bug</a>
     ·
