@@ -1,13 +1,13 @@
 {
   "name": "storybooks",
   "version": "1.0.0",
-  "description": "app to create public and private stories",
+  "description": "blog app for private and public stories",
   "main": "app.js",
   "scripts": {
     "start": "node app",
     "dev": "nodemon app"
   },
-  "author": "Juni",
+  "author": "Juni Nguyen",
   "license": "MIT",
   "dependencies": {
     "algoliasearch": "^4.9.1",
