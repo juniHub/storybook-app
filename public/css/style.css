@@ -403,6 +403,9 @@ nav a {
 
   .dashboard-href{
      margin: 4rem auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
 
   }
   .dashboard-btn {
@@ -418,6 +421,8 @@ nav a {
     background: #8bd3dd;
     
   }
+
+  
 
   .logout-btn {
 
@@ -609,18 +614,24 @@ nav a {
  #container {
 
    margin-top: 2rem;
-  
-   
+     
+ }
+
+ #container em {
+   background: #8bd3dd;
  }
 
 
  .collection-item {
     background: #fef6e4 !important;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
  }
 
  
 
  .collection-item:hover{
-    background: #001858;
+    background: #001858 !important;
  
  }

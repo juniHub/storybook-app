@@ -83,7 +83,7 @@ module.exports.createStory = async (req, res, next) => {
         
     if ( req.body.body === "" || req.body.body === "undefined")
     {
-        req.flash( 'error', 'title, tags and body content is required!' );
+        req.flash( 'error', 'all fields are required!' );
         return res.redirect( 'stories/add' );
        
     }
@@ -108,15 +108,10 @@ module.exports.createStory = async (req, res, next) => {
         
 
     console.log( story )
-    
-    
-
-                      
+                          
           req.flash( 'success', 'You have a new post!' );
           res.redirect( '/dashboard');
-
-    
-                
+         
   }  catch ( error)
   {
    

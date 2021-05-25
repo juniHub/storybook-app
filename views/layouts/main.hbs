@@ -114,6 +114,8 @@
         $( document ).ready( function ()
         {
 
+
+
             var applicationID = '2UZGCMHPPF';
             var apiKey = 'c4264e347958a0b318db93771fe73c0f';
             var index = 'juni-storybook';
@@ -131,7 +133,8 @@
 
             function renderHits( content )
             {
-
+                
+              
                 $( '#container' ).html( function ()
                 {
 
@@ -185,13 +188,17 @@
                 {
                     return $.map( content.getFacetValues( 'tags' ), function ( facet )
                     {
+
+                     
+
                         var checkbox = $( '<input type=checkbox>' )
                             .data( 'facet', facet.name )
                             .attr( 'id', 'fl-' + facet.name );
+
                         if ( facet.isRefined ) checkbox.attr( 'checked', 'checked' );
 
                         var label = $( '<label>' ).html( "#" + facet.name + ' (' + facet.count + ')' ).attr( 'for', 'fl-' + facet.name );
-
+                       // var span = $( '<span>' ).html( "#" + facet.name + ' (' + facet.count + ')' );
 
                         return $( '<a>' ).append( checkbox ).append( label );
                     } );
