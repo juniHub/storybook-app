@@ -119,6 +119,17 @@ This is an example of how to list things you need to use the software and how to
    npm install
    ```
 
+3. Connect to your mongodb and add info in
+
+   ```sh
+   config.env
+   ```
+
+4. Run the project locally on [http://localhost:3000](http://localhost:3000)
+
+   ```sh
+   npm run dev
+   ```
 
 
 <!-- USAGE EXAMPLES -->
