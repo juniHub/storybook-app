@@ -87,9 +87,11 @@
 * [ExpressJS](https://expressjs.com/)
 * [Handlebars View Engine](https://handlebarsjs.com/)
 * [MongoDB](https://www.mongodb.com/)
-* [CKeditor] (https://ckeditor.com/)
+* [CKeditor](https://ckeditor.com/)
 * [Cloudinary](https://cloudinary.com/)
+* [MaterializeCSS](https://materializecss.com/)
 * [Algolia Search](https://www.algolia.com/)
+* [Deployed on Heroku](https://id.heroku.com/)
 
 
 
@@ -122,9 +124,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-_For more examples, please refer to the [Documentation](https://junitiennguyen.gitbook.io/story-book)_
-
-
+_For more examples, please refer to the [Documentation](https://junitiennguyen.gitbook.io/story-book). This will be continued for update and maintainance._
 
 <!-- ROADMAP -->
 ## Roadmap
