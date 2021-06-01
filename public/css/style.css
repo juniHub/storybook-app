@@ -19,9 +19,8 @@ html, body {
   background: #fef6e4;
 
   width: 100%;
-  min-width: 260px !important;
   
-  margin: 2rem auto 2rem auto;
+  margin: 2rem auto;
   -webkit-box-shadow: 0 10px 6px -6px gray;
   -moz-box-shadow: 0 10px 6px -6px gray;
   box-shadow: 0 10px 6px -6px gray;
@@ -43,8 +42,7 @@ html, body {
 
   justify-content: center;
   align-items: center;
-
-  margin: 2rem auto;
+  margin: 2rem 1rem;
   padding-bottom: 2rem !important;
 
 
@@ -467,7 +465,10 @@ nav a {
 
  .social-btn {
     margin-top: 1rem;
+    padding: 1rem 1rem;
+  
  }
+
 
  .social-btn-group{
      margin: 1rem auto;
