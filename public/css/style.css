@@ -5,13 +5,11 @@ html, body {
 
   padding: 0;
   margin: 0;
-
   color: #fffffe;
   background: #232946;
   font-family: 'Baloo Thambi 2', cursive;
   scroll-behavior: smooth;
   
-
 }
 
 
@@ -95,11 +93,17 @@ html, body {
 .weather-container {
   width: 100%;
   height: 100%;
-
   margin: 2rem auto;
   padding: 1rem;
   
  
+}
+
+.story-title-show{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 2rem;
 }
 
 .login-title {
@@ -345,8 +349,20 @@ nav a {
   }
 
   .medium-img{
-    max-width: 500px !important;
+    max-width: 800px !important;
     width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .post-img{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
   }
 
  .dashboard-img{

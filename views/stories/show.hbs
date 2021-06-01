@@ -29,31 +29,24 @@
 </div>
 
 
-
-
 <div class="card-title">
 
-    <span class="">Posted by <strong>{{story.user.displayName}}</strong></span>
-    <span class="">on {{formatDate story.createdAt "MMMM Do YYYY, h:mm:ss a"}}</span>
-
+    <span>Posted by <strong>{{story.user.displayName}}</strong></span>
+    <span>on {{formatDate story.createdAt "MMMM Do YYYY, h:mm:ss a"}}</span>
 
 </div>
 
 <div class="card show-card">
 
     <div class="card story">
-
-        <div class="card-content post-body">
-
-            <p> {{{story.body}}}</p>
-
-        </div>
-
         <div class="card-content post-img">
-            <span class="card-title">Your Photo</span>
             <img src="{{story.image}}" class="responsive-img medium-img" alt="post-image">
         </div>
 
+        <div class="card-content post-body">
+            <h4 class="story-title-show">{{story.title}}</h4>
+            <p> {{{story.body}}}</p>
+        </div>
 
     </div>
 
