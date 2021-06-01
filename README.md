@@ -17,7 +17,7 @@
 [stars-shield]: https://img.shields.io/github/stars/juniHub/storybook-app.svg?style=for-the-badge
 [stars-url]: https://github.com/juniHub/storybook-app/stargazers
 [issues-shield]: https://img.shields.io/github/issues/juniHub/storybook-app.svg?style=for-the-badge
-[issues-url]: https://github.com/gjuniHub/storybook-app/issues
+[issues-url]: https://github.com/juniHub/storybook-app/issues
 [license-shield]: https://img.shields.io/github/license/juniHub/storybook-app.svg?style=for-the-badge
 [license-url]: https://github.com/juniHub/storybook-app/blob/master/LICENSE.txt
 
@@ -84,10 +84,14 @@
 
 ### Built With
 
+* [ExpressJS](https://expressjs.com/)
 * [Handlebars View Engine](https://handlebarsjs.com/)
 * [MongoDB](https://www.mongodb.com/)
+* [CKeditor](https://ckeditor.com/)
 * [Cloudinary](https://cloudinary.com/)
+* [MaterializeCSS](https://materializecss.com/)
 * [Algolia Search](https://www.algolia.com/)
+* [Deployed on Heroku](https://id.heroku.com/)
 
 
 
@@ -115,16 +119,23 @@ This is an example of how to list things you need to use the software and how to
    npm install
    ```
 
+3. Connect to your mongodb and add info in
+
+   ```sh
+   config.env
+   ```
+
+4. Run the project locally on [http://localhost:3000](http://localhost:3000)
+
+   ```sh
+   npm run dev
+   ```
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+_For more examples, please refer to the [Documentation](https://junitiennguyen.gitbook.io/story-book). This will be continued for update and maintainance._
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -136,7 +147,7 @@ See the [open issues](https://github.com/juniHub/storybook-app/issues) for a lis
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to be learned, inspired, and created. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
