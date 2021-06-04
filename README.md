@@ -26,7 +26,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/juniHub/storybook-app">
-    <img src="https://res.cloudinary.com/dafolrlpj/image/upload/v1621254108/gallery/pd5caizxucevio9vmw6z.png" alt="Logo" width="80" height="80">
+    <img src="logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Juni Story Book</h3>
