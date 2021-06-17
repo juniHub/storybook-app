@@ -26,7 +26,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/juniHub/storybook-app">
-    <img src="https://res.cloudinary.com/dafolrlpj/image/upload/v1621254108/gallery/pd5caizxucevio9vmw6z.png" alt="Logo" width="80" height="80">
+    <img src="logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Juni Story Book</h3>
@@ -77,8 +77,43 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+### Welcome Page
 
 ![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1621253080/gallery/janpdozvj3w2ovw2x0dd.png)
+
+### Mobile-View Page (Responsible view on different devices)
+
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551452/gallery/cqyv8ey3jh79wcevjnte.png)
+
+### Dashboard Page after Login
+
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551450/gallery/tmcikdsstxfbk5wvtj43.png)
+
+### Index Page after Login
+
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551451/gallery/diqybjdbzn7wst7zcht0.png)
+
+### Create New Story after Login
+
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551449/gallery/a29hhcphvkaiaeftoxbv.png)
+
+### Edit Story after Login
+
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622552490/gallery/ohrycrtbxjrorbgje1rq.png)
+
+
+### User's Public Page after Login
+
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551498/gallery/a8972hg04sbpuifnc71t.png)
+
+### User's Private Page after Login
+
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551496/gallery/scgd5yagjfrbscsign7s.png)
+
+### User's Single Story Page after Login
+
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551454/gallery/qtwpifeq7ffibui2zjg6.png)
+
 
 
 
@@ -167,7 +202,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Juni Nguyen - [hellojuninguyen@gmail.com](hellojuninguyen@gmail.com)
+Juni Nguyen - [hello Juni](hellojuninguyen@gmail.com)
 
 Project Link: [https://github.com/juniHub/storybook-app](https://github.com/juniHub/storybook-app)
 
