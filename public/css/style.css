@@ -19,7 +19,7 @@ html, body {
   background: #fef6e4;
 
   width: 100%;
-  
+   
   margin: 2rem auto;
   -webkit-box-shadow: 0 10px 6px -6px gray;
   -moz-box-shadow: 0 10px 6px -6px gray;
@@ -55,6 +55,10 @@ html, body {
   justify-content: space-evenly;
   align-items: center;
 
+}
+
+.card-content-dashboard{
+  height: 260px;
 }
 
 
