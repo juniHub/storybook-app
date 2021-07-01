@@ -93,11 +93,6 @@ router.post( '/',  ensureGuest, async ( req, res ) =>
 
     const weather = JSON.parse( body );
 
-    //const quoteData = JSON.parse(body);
-   // const index = getRandomIndex( quoteData.quotes ); 
-
-
-
     if ( err )
     {
       res.render( "login", {
@@ -125,7 +120,7 @@ router.post( '/',  ensureGuest, async ( req, res ) =>
 
       } else
       {
-        const weatherText = `It's ${ weather.weather[ 0 ].description } in ${ weather.name } now!`;
+        const weatherText = `It's ${ weather.weather[ 0 ].description } in ${ weather.name }, ${weather.sys.country} now!`;
 
         const mainWeather = weather.weather[ 0 ].main;
 
