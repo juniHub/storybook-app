@@ -79,11 +79,8 @@
 ## About The Project
 ### Welcome Page
 
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1621253080/gallery/janpdozvj3w2ovw2x0dd.png)
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1627304396/gallery/rdtwiupgvygtginlozxx.png)
 
-### Mobile-View Page (Responsible view on different devices)
-
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551452/gallery/cqyv8ey3jh79wcevjnte.png)
 
 ### Dashboard Page after Login
 
