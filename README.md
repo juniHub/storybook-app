@@ -77,42 +77,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-### Welcome Page
+### Am I Responsive? YES!
 
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1627304396/gallery/rdtwiupgvygtginlozxx.png)
-
-
-### Dashboard Page after Login
-
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551450/gallery/tmcikdsstxfbk5wvtj43.png)
-
-### Index Page after Login
-
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551451/gallery/diqybjdbzn7wst7zcht0.png)
-
-### Create New Story after Login
-
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551449/gallery/a29hhcphvkaiaeftoxbv.png)
-
-### Edit Story after Login
-
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622552490/gallery/ohrycrtbxjrorbgje1rq.png)
-
-
-### User's Public Page after Login
-
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551498/gallery/a8972hg04sbpuifnc71t.png)
-
-### User's Private Page after Login
-
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551496/gallery/scgd5yagjfrbscsign7s.png)
-
-### User's Single Story Page after Login
-
-![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1622551454/gallery/qtwpifeq7ffibui2zjg6.png)
-
-
-
+![Juni-storybook-screenshot](https://res.cloudinary.com/dafolrlpj/image/upload/v1628255904/gallery/zxzb739nungfxptfeet2.png)
 
 ### Built With
 
