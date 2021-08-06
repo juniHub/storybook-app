@@ -312,6 +312,9 @@ th
 .btn:hover{
   background-color: #9656a1;
 }
+.btn:focus {
+  background-color: #9656a1;
+}
 
  .login-btn {
    min-width: 190px;
@@ -470,6 +473,15 @@ th
     display: flex;
     align-items: center;
     justify-content: space-between;
+ }
+
+ .fa-edit {
+   background-color: #000;
+   color: white;
+   border-radius: 10px;
+   font-size: 3rem;
+ 
+ 
  }
  
  footer {
