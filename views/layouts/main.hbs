@@ -24,8 +24,7 @@
 <body>
 
     {{> _header}}
-    {{> _add_btn}}
-
+ 
     <div class="container">
 
         {{{body}}}
@@ -207,8 +206,7 @@
                         if ( facet.isRefined ) checkbox.attr( 'checked', 'checked' );
 
                         var label = $( '<label>' ).html( "#" + facet.name + ' (' + facet.count + ')' ).attr( 'for', 'fl-' + facet.name );
-                       // var span = $( '<span>' ).html( "#" + facet.name + ' (' + facet.count + ')' );
-
+                       
                         return $( '<a>' ).append( checkbox ).append( label );
                     } );
                 } );

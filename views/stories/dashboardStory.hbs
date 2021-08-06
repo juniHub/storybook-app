@@ -1,16 +1,15 @@
 <div id="dashboard-stories" class="dashboard-href">
-    <a class="dashboard-btn" href="/dashboard"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+    <a class="btn" href="/dashboard"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
 </div>
 
-<h3>Welcome {{name}} 😊</h3>
-<h5>Manage Your Public Stories Here ❤️</h5>
+<h5>Manage Your Public Stories Here</h5>
 
 
 {{#if stories}}
 <div class="row">
     {{#each stories}}
     {{#condition status "==" "public"}}
-    <div class="col s12 m4">
+    <div class="col s12 m6 l4">
         <div class="card sticky-action">
 
             <div class="card-image img-hover-zoom img-hover-zoom--quick-zoom">
@@ -25,7 +24,7 @@
             <div class="card-content card-content-dashboard center-align">
                 <span class="card-title activator grey-text text-darken-4"><a class="highlighted"
                         href="/stories/{{_id}}" target="_blank"
-                        rel="noopener noreferrer"><strong>{{title}}</strong></a><i
+                        rel="noopener noreferrer"><strong class="lead">{{title}}</strong></a><i
                         class="material-icons right">more_vert</i></span>
 
                 </span>

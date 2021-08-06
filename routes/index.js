@@ -50,7 +50,7 @@ router.get( "/", ensureGuest, async ( req, res ) =>
         layout: "login",
         stories,
         quote: "If you want to lift yourself up, lift up someone else.", author: "Booker T. Washington",
-        weather: null, temp: null, tempF:null, icon: "/assets/tent.svg", today, error: null
+        weather: null, temp: null, tempF:null, icon: "/assets/weather.svg", today, error: null
       });
     } else {
       res.render("login", {
@@ -58,7 +58,7 @@ router.get( "/", ensureGuest, async ( req, res ) =>
         stories,
         quote: quoteData.quotes[index].quote,
         author: quoteData.quotes[ index ].author,
-        weather: null, temp: null, tempF:null, icon: "/assets/tent.svg", today, error: null
+        weather: null, temp: null, tempF:null, icon: "/assets/weather.svg", today, error: null
       });
     }
   });
@@ -100,7 +100,7 @@ router.post( '/',  ensureGuest, async ( req, res ) =>
         stories,
         quote: "If you want to lift yourself up, lift up someone else.", author: "Booker T. Washington",
        
-        weather: null, temp: null, tempF: null, icon: "/assets/tent.svg", today,  error: 'Enter city name!'
+        weather: null, temp: null, tempF: null, icon: "/assets/weather.svg", today,  error: 'Enter city name!'
       } );
 
            
@@ -115,7 +115,7 @@ router.post( '/',  ensureGuest, async ( req, res ) =>
           stories,
           quote: "If you want to lift yourself up, lift up someone else.", author: "Booker T. Washington",
           
-          weather: null, temp: null, tempF: null, icon: "/assets/tent.svg", today, error: 'Enter city name!'
+          weather: null, temp: null, tempF: null, icon: "/assets/weather.svg", today, error: 'Enter city name!'
         } );
 
       } else

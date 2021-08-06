@@ -1,8 +1,9 @@
 <div class="row">
 
-    <div class="col s12 m8 login-container" id="login">
 
-        <a href="#stories"><img width="100" height="100" src="/assets/logo.png" alt="logo-img"
+    <div class="col s12 m12 login-container" id="login">
+
+        <a href="#stories"><img width="200" height="200" src="/assets/coding.svg" alt="logo-img"
                 class="responsive-img logo-img"></a>
 
         <h3><a href="#stories" class="login-title"> Welcome to juniHUB</a></h3>
@@ -23,71 +24,10 @@
             </div>
         </div>
 
+ 
     </div>
 
-    <div class="col s12 m4 weather-container" id="weather">
-
-        <div class="section weather-area">
-
-            <form class="city-input" action="/" method="post">
-                <input type="text" name="cityName" autocomplete="off" class="search-box"
-                    placeholder="Search for a city">
-                <button type="submit" class="btn weather-btn">
-                    <i class="fas fa-umbrella"></i>&nbsp;weather now
-                </button>
-            </form>
-
-            <div class="weather-display">
-
-                <div class="weather">
-
-                    <p>
-                        {{weather}}
-                    </p>
-
-                    {{#if error}}
-                    <p>
-                        {{ error }}
-                    </p>
-                    {{/if}}
-
-                </div>
-
-                <div class="date">
-
-                    <p class="chip today-date">{{formatDate today "MMMM Do YYYY"}}</p>
-
-                </div>
-
-
-                <div class="temp">
-                    <div>
-
-                        <img height="60px" width="60px" src="{{icon}}" />
-
-                    </div>
-
-                    <div>
-
-                        {{temp}}
-
-                        <span>°C</span>
-                        /
-
-                        {{tempF}}
-
-                        <span>°F</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-
+   
 </div>
 
 <div id="stories">
@@ -95,7 +35,7 @@
     {{#if stories}}
     <div class="row">
         {{#each stories}}
-        <div class="col s12 m4 moreBox">
+        <div class="col s12 m6 l4 moreBox">
             <div class="card sticky-action">
 
                 <div class="card-image img-hover-zoom img-hover-zoom--quick-zoom">
@@ -108,7 +48,7 @@
                 <div class="card-content center-align card-content-login">
                     <span class="card-title activator grey-text text-darken-4"><a class="highlighted"
                             href="/auth/google" target="_blank"
-                            rel="noopener noreferrer"><strong>{{title}}</strong></a><i
+                            rel="noopener noreferrer"><strong class="lead">{{title}}</strong></a><i
                             class="material-icons right">more_vert</i></span>
                     <span class="chip">#{{tags}}</span>
 
@@ -155,5 +95,66 @@
         <a href="#" class="btn custom-btn">Load More</a>
     </div>
 
+
+</div>
+
+<div class="col s12 m12 weather-container" id="weather">
+
+    <div class="section weather-area">
+
+        <form class="city-input" action="/" method="post">
+            <input type="text" name="cityName" autocomplete="off" class="search-box" placeholder="Search for a city">
+            <button type="submit" class="btn weather-btn">
+                <i class="fas fa-umbrella"></i>&nbsp;weather now
+            </button>
+        </form>
+
+        <div class="weather-display">
+
+            <div class="weather">
+
+                <p>
+                    {{weather}}
+                </p>
+
+                {{#if error}}
+                <p>
+                    {{ error }}
+                </p>
+                {{/if}}
+
+            </div>
+
+            <div class="date">
+
+                <p class="chip today-date">{{formatDate today "MMMM Do YYYY"}}</p>
+
+            </div>
+
+
+            <div class="temp">
+                <div>
+
+                    <img height="100px" width="100px" src="{{icon}}" />
+
+                </div>
+
+                <div>
+
+                    {{temp}}
+
+                    <span>°C</span>
+                    /
+
+                    {{tempF}}
+
+                    <span>°F</span>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 
 </div>
