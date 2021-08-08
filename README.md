@@ -166,7 +166,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Juni Nguyen - [hello Juni](hellojuninguyen@gmail.com)
+Juni Nguyen - [helloJuni](https://hellojuninguyen.netlify.app/)
 
 Project Link: [https://github.com/juniHub/storybook-app](https://github.com/juniHub/storybook-app)
 
