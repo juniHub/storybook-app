@@ -18,6 +18,7 @@ html, body {
 
 .card-action {
   height: 100%;
+  
 }
 
 .card-action-show-page {
@@ -315,11 +316,6 @@ th
 .btn:focus {
   background-color: #9656a1;
 }
-
- .login-btn {
-   min-width: 190px;
-   text-transform: lowercase;
-  }
 
  .weather-btn {
    min-width: 180px;
