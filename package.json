@@ -4,7 +4,6 @@
   "description": "blog app for private and public stories",
   "main": "app.js",
   "scripts": {
-  
     "start": "node app",
     "dev": "nodemon app"
   },
