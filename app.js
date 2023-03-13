@@ -9,7 +9,7 @@ const methodOverride = require('method-override');
 const passport = require('passport');
 const session = require( 'express-session' );
 const flash = require( 'connect-flash' );
-const MongoStore = require( 'connect-mongo' )( session );
+const MongoStore = require( 'connect-mongo' );
 
 
 const connectDB = require('./config/db');
@@ -64,7 +64,7 @@ const {
 //handlebars
 app.engine(
   '.hbs',
-  exphbs({
+  exphbs.engine({
     helpers: {
       formatDate,
       stripTags,
@@ -86,7 +86,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //sessions
 app.use(
   session( {
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,

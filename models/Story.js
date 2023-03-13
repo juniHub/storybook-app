@@ -1,7 +1,6 @@
 const mongoose = require( 'mongoose' );
 const mongooseAlgolia = require( 'mongoose-algolia' )
 
-
 const StorySchema = new mongoose.Schema({
  
   image: String,
@@ -24,7 +23,6 @@ const StorySchema = new mongoose.Schema({
     algoliaIndex: true
    
   },
-
 
 
   body: {

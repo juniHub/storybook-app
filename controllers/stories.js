@@ -72,6 +72,7 @@ module.exports.renderNewForm = (req, res) => {
 module.exports.createStory = async (req, res, next) => {
   
   req.body.user = req.user.id;
+  
   const seed = getRandomInt( 100 );
 
   try
@@ -104,10 +105,10 @@ module.exports.createStory = async (req, res, next) => {
       }
     
 
-    await story.save();
+   const result = await story.save();
         
 
-    console.log( story )
+    console.log( result )
                           
           req.flash( 'success', 'You have a new post!' );
           res.redirect( '/dashboard');
@@ -210,7 +211,7 @@ module.exports.updateStory = async ( req, res ) =>
             
       story = await Story.findByIdAndUpdate( id, req.body );
    
-      console.log( story );
+   
        await story.save();
 
       req.flash( 'success', 'You have just updated your post!' );

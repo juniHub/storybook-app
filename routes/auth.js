@@ -19,11 +19,18 @@ router.get(
 
 // @desc    Logout user
 // @route   /auth/logout
-router.get( '/logout', ( req, res ) =>
+/*router.get( '/logout', ( req, res ) =>
 {
     req.logout();
     res.redirect( '/' );
-} );
+} );*/
+
+router.get('/logout', function(req, res, next) {
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      res.redirect('/');
+    });
+  });
 
  router.get("/current_user", (req, res) => {
     res.send(req.user);
