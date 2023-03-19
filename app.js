@@ -14,7 +14,6 @@ const MongoStore = require( 'connect-mongo' );
 
 const connectDB = require('./config/db');
 
-//load config
 
 if (process.env.NODE_ENV !== "production") {
     dotenv.config({ path: './config/config.env' });
@@ -24,7 +23,7 @@ if (process.env.NODE_ENV !== "production") {
 //passport config
 require('./config/passport')(passport);
 
-connectDB();
+//connectDB();
 
 const app = express();
 
@@ -130,8 +129,9 @@ app.use( '/stories', require( './routes/stories' ) );
 const port = process.env.PORT || 3000;
 
 
-app.listen(
-  port,
-  console.log( `Server running on port ${ port }` )
-  
-);
+//Connect to the database before listening
+connectDB().then(() => {
+  app.listen(port, () => {
+      console.log(`Server running on port ${ port }`);
+  })
+})
