@@ -37,7 +37,7 @@
     <a href="https://github.com/juniHub/storybook-app"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://juni-storybook.herokuapp.com/" target="_blank">View Demo</a>
+    <a href="https://junistorybook.cyclic.app/" target="_blank">View Demo</a>
     ·
     <a href="https://github.com/juniHub/storybook-app/issues">Report Bug</a>
     ·
